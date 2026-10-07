@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discount Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        h1 {
+            color: #172033;
+            margin-bottom: 45px;
+        }
+
+        label {
+            display: block;
+            font-size: 22px;
+            font-weight: bold;
+            color: #64748b;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+
+        .result-title {
+            color: #64748b;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .result {
+            font-size: 32px;
+            color: #172033;
+            margin-top: 8px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        button {
+            flex: 1;
+            padding: 20px;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #compute {
+            background-color: Black;
+        }
+
+        #reset {
+            background-color: #64748b;
+        }
+
+        .programmer {
+            color: #64748b;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 30px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Discount Calculator</h1>
+
+        <label>Price</label>
+        <input type="number" id="price" placeholder="">
+
+        <label>DISCOUNT (%)</label>
+        <input type="number" id="discount" placeholder="">
+
+        <div class="result-title">
+            PRICE AFTER DISCOUNT
+        </div>
+
+        <div class="result" id="after">
+            ₱ 0.00
+        </div>
+
+        <div class="result-title">
+            SAVED AMOUNT
+        </div>
+
+        <div class="result" id="saved">
+            ₱ 0.00
+        </div>
+
+        <div class="buttons">
+            <button id="compute" onclick="computeDiscount()">
+                Compute
+            </button>
+
+            <button id="reset" onclick="resetCalculator()">
+                Reset
+            </button>
+        </div>
+
+        <div class="programmer">
+            PROGRAMMED BY: Christof<br>
+            Soriano, 12-COOPER
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function computeDiscount() {
+
+            // Get the values from the input boxes
+            var price = document.getElementById("price").value;
+            var discount = document.getElementById("discount").value;
+
+            // Convert the values into numbers
+            price = Number(price);
+            discount = Number(discount);
+
+            // Calculate the discount amount
+            var saved = price * discount / 100;
+
+            // Calculate the price after discount
+            var after = price - saved;
+
+            // Display the answers
+            document.getElementById("after").innerHTML =
+                "₱ " + after.toFixed(2);
+
+            document.getElementById("saved").innerHTML =
+                "₱ " + saved.toFixed(2);
+        }
+
+
+        function resetCalculator() {
+
+            // Clear the input boxes
+            document.getElementById("price").value = "";
+            document.getElementById("discount").value = "";
+
+            // Return the results to zero
+            document.getElementById("after").innerHTML = "₱ 0.00";
+            document.getElementById("saved").innerHTML = "₱ 0.00";
+        }
+
+    </script>
+
+</body>
+</html>
