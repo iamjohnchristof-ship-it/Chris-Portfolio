@@ -1,0 +1,61 @@
+.navbar {
+  background-color: #1B365D; /* Background color ng buong navigation bar */
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  display: flex; /* Ginagawang Flexbox container para ma-align ang items */
+  flex-direction: row; /* Inaaayos ang menu items nang horizontal */
+  justify-content: flex-start; /* Inilalagay ang items sa kaliwang side */
+  align-items: center; /* Inaa-align ang items sa gitna vertically */
+  list-style-type: none; /* Tinatanggal ang default bullets ng listahan */
+  margin: 0; /* Tinatanggal ang default margin mula sa browser */
+  padding: 0; /* Tinatanggal ang default padding mula sa browser */
+}
+
+.nav-link {
+  display: block; /* Ginagawang clickable yung buong padding area */
+  padding: 14px 20px; /* Naglalagay ng allowance sa loob ng link box */
+  color: #FFFFFF; /* Puti ang kulay ng text para readable sa dark background */
+  text-decoration: none; /* Tinatanggal ang default underline ng link */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 1. Default state para sa unvisited link */
+.nav-link:link {
+  color: #FFFFFF;
+}
+
+/* 2. State kapag nabisita o na-click na ang link dati */
+.nav-link:visited {
+  color: #E0E0E0;
+}
+
+/* 3. State kapag itinapat ang mouse cursor sa link */
+.nav-link:hover {
+  background-color: #005A9C;
+  color: #FFFFFF;
+}
+
+/* 4. State kapag ginamitan ng Tab key sa keyboard (Para sa accessibility/WCAG) */
+.nav-link:focus {
+  outline: 3px solid #FFC107;
+  outline-offset: -3px;
+  background-color: #004080;
+}
+
+/* 5. State habang pino-press o kini-click ang link */
+.nav-link:active {
+  background-color: #002B55;
+  transform: translateY(1px);
+}
+
+/* 6. Class para ma-highlight ang current page na binibisita */
+.nav-link.active {
+  background-color: #005A9C;
+  border-bottom: 4px solid #FFC107;
+}
