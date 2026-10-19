@@ -1,0 +1,34 @@
+[
+    {
+        "lrn": "345789865434",
+        "name": "Erson jamero",
+        "age": "17",
+        "section": "12-Cooper",
+        "image": "Images/jamero.jpg"
+    },
+    {
+        "lrn": "3456787643234",
+        "name": "Chelsea Tabarnilla",
+        "age": "18",
+        "section": "12-Cooper",
+        "image": "Images/Chelsea.jpg"
+    },
+     {
+        "lrn": "3456787643234",
+        "name": "Vince Zyvon",
+        "age": "21",
+        "section": "12-Cooper",
+        "image": "Images/Vince.jpg"
+    },
+      {
+        "lrn": "3456787643234",
+        "name": "Christof soriano",
+        "age": "17",
+        "section": "12-Cooper",
+        "image": "Images/Christof.jpg"
+    }
+ 
+    
+    
+
+]
