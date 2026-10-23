@@ -24,3 +24,100 @@
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+/* 1. Unvisited default link state */
+.nav-link:link {
+ color: #FFFFFF;
+}
+/* 2. Visited link state */
+.nav-link:visited {
+ color: #E0E0E0;
+}
+/* 3. Mouse hover state */
+.nav-link:hover {
+ background-color: #9b2d57;
+ color: #FFFFFF;
+}
+/* 4. Keyboard focus state (Accessibility / WCAG compliance) */
+.nav-link:focus {
+ outline: 3px solid #9b2d57;
+ outline-offset: -3px;
+ background-color: #420019;
+}
+/* 5. Active click-press state */
+.nav-link:active {
+ background-color: #420019;
+ transform: translateY(1px);
+}
+/* 6. Current page highlight class */
+.nav-link.active {
+ background-color: #c5396f;
+ background-image: linear-gradient(#c5396f,#9b2d57);
+ border-bottom: 4px solid #ff4b90;
+}
+
+.myFont {
+ font-family: Arial;
+}
+
+.gradientTextHeader {
+  background-image: linear-gradient(90deg, #c5396f, #9b2d57);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.5px #000000;
+  color: transparent;
+  display: inline-block; 
+  font-family: Arial;
+  font-size: 50px;
+}
+
+ALGORITHM RenderHorizontalMenu
+INPUT: MenuItemsList (Array of Objects containing Title, TargetURL, Controller,
+IsActive)
+OUTPUT: HTML Navigation Bar Structure
+BEGIN
+ CREATE containerElement AS HTML_Element("nav")
+ SET containerElement.ClassName = "navbar"
+ SET containerElement.Attribute("role") = "navigation"
+
+ CREATE listElement AS HTML_Element("ul")
+ SET listElement.ClassName = "nav-list"
+ SET listElement.Style.Display = "flex"
+ SET listElement.Style.FlexDirection = "row"
+ SET listElement.Style.ListStyle = "none"
+ FOR EACH item IN MenuItemsList DO
+ CREATE itemElement AS HTML_Element("li")
+ SET itemElement.ClassName = "nav-item"
+ CREATE linkElement AS HTML_Element("a")
+ SET linkElement.ClassName = "nav-link"
+ SET linkElement.TextContent = item.Title
+ SET linkElement.Attribute("href") = item.TargetURL
+ IF item.IsActive EQUALS TRUE THEN
+ APPEND " active" TO linkElement.ClassName
+ ENDIF
+ APPEND linkElement TO itemElement
+ APPEND itemElement TO listElement
+ ENDFOR
+ APPEND listElement TO containerElement
+ RETURN containerElement
+END ALGORITHM
+CASE "KEYBOARD_TAB_FOCUS":
+ APPLY CSS_Rule(":focus") -> Render Golden Outline (3px solid
+#FFC107)
+ BREAK
+ CASE "KEYBOARD_BLUR":
+ REMOVE CSS_Rule(":focus") -> Clear Focus Ring
+BREAK
+ CASE "MOUSE_BUTTON_DOWN":
+ APPLY CSS_Rule(":active") -> Set Background = #002B55,
+TranslateY(1px)
+ BREAK
+ CASE "MOUSE_BUTTON_UP":
+ REMOVE CSS_Rule(":active")
+BREAK
+ DEFAULT:
+ MAINTAIN Base State ("a:link" OR "a:visited")
+ END SWITCH
+
+ END WHILE
+END ALGORITHM
+
