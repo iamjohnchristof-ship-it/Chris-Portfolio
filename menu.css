@@ -24,38 +24,3 @@
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* 1. Default state para sa unvisited link */
-.nav-link:link {
-  color: #FFFFFF;
-}
-
-/* 2. State kapag nabisita o na-click na ang link dati */
-.nav-link:visited {
-  color: #E0E0E0;
-}
-
-/* 3. State kapag itinapat ang mouse cursor sa link */
-.nav-link:hover {
-  background-color: #005A9C;
-  color: #FFFFFF;
-}
-
-/* 4. State kapag ginamitan ng Tab key sa keyboard (Para sa accessibility/WCAG) */
-.nav-link:focus {
-  outline: 3px solid #FFC107;
-  outline-offset: -3px;
-  background-color: #004080;
-}
-
-/* 5. State habang pino-press o kini-click ang link */
-.nav-link:active {
-  background-color: #002B55;
-  transform: translateY(1px);
-}
-
-/* 6. Class para ma-highlight ang current page na binibisita */
-.nav-link.active {
-  background-color: #005A9C;
-  border-bottom: 4px solid #FFC107;
-}
