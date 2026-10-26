@@ -1,62 +1,63 @@
 .navbar {
-  background-color: #1B365D; /* Background color ng buong navigation bar */
+  background-color: gold; /* Pinalitan naging gold */
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-list {
-  display: flex; /* Ginagawang Flexbox container para ma-align ang items */
-  flex-direction: row; /* Inaaayos ang menu items nang horizontal */
-  justify-content: flex-start; /* Inilalagay ang items sa kaliwang side */
-  align-items: center; /* Inaa-align ang items sa gitna vertically */
-  list-style-type: none; /* Tinatanggal ang default bullets ng listahan */
-  margin: 0; /* Tinatanggal ang default margin mula sa browser */
-  padding: 0; /* Tinatanggal ang default padding mula sa browser */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  display: block; /* Ginagawang clickable yung buong padding area */
-  padding: 14px 20px; /* Naglalagay ng allowance sa loob ng link box */
-  color: #FFFFFF; /* Puti ang kulay ng text para readable sa dark background */
-  text-decoration: none; /* Tinatanggal ang default underline ng link */
+  display: block;
+  padding: 14px 20px;
+  color: #000000; /* Pinalitan naging black text */
+  text-decoration: none;
   font-family: 'Segoe UI', sans-serif;
   font-size: 15px;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* 1. Unvisited default link state */
+
 .nav-link:link {
- color: #FFFFFF;
+  color: #000000;
 }
-/* 2. Visited link state */
+
 .nav-link:visited {
- color: #E0E0E0;
+  color: #333333;
 }
-/* 3. Mouse hover state */
+
 .nav-link:hover {
- background-color: gold;
- color: #FFFFFF;
+  background-color: #000000;
+  color: gold;
 }
-/* 4. Keyboard focus state (Accessibility / WCAG compliance) */
+
 .nav-link:focus {
- outline: 3px solid gold;
- outline-offset: -3px;
- background-color: gold;
+  outline: 3px solid #000000;
+  outline-offset: -3px;
+  background-color: #000000;
 }
-/* 5. Active click-press state */
+
 .nav-link:active {
- background-color: gold;
- transform: translateY(1px);
+  background-color: #000000;
+  transform: translateY(1px);
 }
-/* 6. Current page highlight class */
+
 .nav-link.active {
- background-color: gold;
- background-image: linear-gradient(gold,gold);
- border-bottom: 4px solid gold;
+  background-color: #000000;
+  background-image: linear-gradient(#000000,#000000);
+  border-bottom: 4px solid #000000;
+  color: gold;
 }
 
 .myFont {
- font-family: Arial;
+  font-family: Arial;
 }
 
 .gradientTextHeader {
@@ -69,54 +70,3 @@
   font-family: Arial;
   font-size: 50px;
 }
-
-ALGORITHM RenderHorizontalMenu
-INPUT: MenuItemsList (Array of Objects containing Title, TargetURL, Controller,
-IsActive)
-OUTPUT: HTML Navigation Bar Structure
-BEGIN
- CREATE containerElement AS HTML_Element("nav")
- SET containerElement.ClassName = "navbar"
- SET containerElement.Attribute("role") = "navigation"
-
- CREATE listElement AS HTML_Element("ul")
- SET listElement.ClassName = "nav-list"
- SET listElement.Style.Display = "flex"
- SET listElement.Style.FlexDirection = "row"
- SET listElement.Style.ListStyle = "none"
- FOR EACH item IN MenuItemsList DO
- CREATE itemElement AS HTML_Element("li")
- SET itemElement.ClassName = "nav-item"
- CREATE linkElement AS HTML_Element("a")
- SET linkElement.ClassName = "nav-link"
- SET linkElement.TextContent = item.Title
- SET linkElement.Attribute("href") = item.TargetURL
- IF item.IsActive EQUALS TRUE THEN
- APPEND " active" TO linkElement.ClassName
- ENDIF
- APPEND linkElement TO itemElement
- APPEND itemElement TO listElement
- ENDFOR
- APPEND listElement TO containerElement
- RETURN containerElement
-END ALGORITHM
-CASE "KEYBOARD_TAB_FOCUS":
- APPLY CSS_Rule(":focus") -> Render Golden Outline (3px solid
-#FFC107)
- BREAK
- CASE "KEYBOARD_BLUR":
- REMOVE CSS_Rule(":focus") -> Clear Focus Ring
-BREAK
- CASE "MOUSE_BUTTON_DOWN":
- APPLY CSS_Rule(":active") -> Set Background = #002B55,
-TranslateY(1px)
- BREAK
- CASE "MOUSE_BUTTON_UP":
- REMOVE CSS_Rule(":active")
-BREAK
- DEFAULT:
- MAINTAIN Base State ("a:link" OR "a:visited")
- END SWITCH
-
- END WHILE
-END ALGORITHM
