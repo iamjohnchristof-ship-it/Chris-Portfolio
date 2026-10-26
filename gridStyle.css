@@ -37,6 +37,7 @@ body{
 }
 
 .link{
+    color: yellow;
     background-image: linear-gradient(90deg, #ffff, #ff4b90);
     background-clip: text;
     -webkit-background-clip: text;
