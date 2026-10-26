@@ -1,46 +1,25 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
 }
 
 body{
-    background-color: #000000; /* 1. Ginawang black ang buong background ng website */
+    background-color: #000000; /* Pinalitan naging black ang background ng site */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    min-height: 200vh;
-}
-
-/* 2. Idagdag o i-update ito para sa Navigation Bar */
-.navbar {
-    background-color: gold; /* Ginawang kulay yellow/gold ang navigation bar */
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.nav-link {
-    color: #000000; /* 3. Ginawang black ang text sa navigation bar */
-    text-decoration: none;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.nav-link:hover {
-    background-color: #000000;
-    color: gold; /* Magiging gold ang text kapag hinawakan ng mouse */
+    min-height:200vh;
 }
 
 .box{
-    background-color: #000000;
-    background-image: none;
-    font-size: 2rem;
-    padding: 0.5rem;
-    color: #FFFFFF; /* Puti ang text sa loob ng mga kahon para lumitaw sa itim na background */
+    background-color: gray;
+    background-image: linear-gradient(blue,black);
+    font-size:2rem;
+    padding:0.5rem;
 }
 
 .container{
-    display: grid;
-    min-height: 400px;
+    display:grid;
+    min-height:400px;
     grid-auto-flow: column;
     grid-template-columns: auto;
     grid-template-rows: repeat(4, 1fr);
