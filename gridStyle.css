@@ -1,25 +1,35 @@
 *{
-    margin:0px;
-    padding:0px;
-    box-sizing:border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: #000000; /* Pinalitan naging black ang background ng site */
+    background-color: gray; /* Ginawang gray ang buong background ng website */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    min-height:200vh;
+    min-height: 200vh;
 }
 
 .box{
-    background-color: gray;
-    background-image: linear-gradient(blue,black);
-    font-size:2rem;
-    padding:0.5rem;
+    background-color: gold; /* Ginawang yellow/gold ang background ng mga box */
+    background-image: none; /* Tinanggal ang dating gradient para purong yellow */
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+/* Idinagdag para maging itim ang text/mga link sa loob ng box */
+.box a {
+    color: #000000; 
+    text-decoration: none;
+}
+
+.box a:hover {
+    color: #ffffff; /* Magiging puti kapag itinapat ang mouse (opsyonal) */
 }
 
 .container{
-    display:grid;
-    min-height:400px;
+    display: grid;
+    min-height: 400px;
     grid-auto-flow: column;
     grid-template-columns: auto;
     grid-template-rows: repeat(4, 1fr);
