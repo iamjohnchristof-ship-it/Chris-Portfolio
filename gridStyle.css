@@ -5,39 +5,46 @@
 }
 
 body{
-    background-color: #595959; /* Ginawang gray ang buong background ng website */
+    background-color: #595959; /* Gray background ng website */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    min-height: 200vh;
-}
-
-.box{
-    background-color: gold; /* Ginawang yellow/gold ang background ng mga box */
-    background-image: none; /* Tinanggal ang dating gradient para purong yellow */
-    font-size: 2rem;
-    padding: 0.5rem;
-}
-
-/* Idinagdag para maging itim ang text/mga link sa loob ng box */
-.box a {
-    color: #000000; 
-    text-decoration: none;
-}
-
-.box a:hover {
-    color: #ffffff; /* Magiging puti kapag itinapat ang mouse (opsyonal) */
+    min-height: 100vh;
 }
 
 .container{
     display: grid;
-    min-height: 400px;
-    grid-auto-flow: column;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 1em;   
+    /* Ginawa itong responsive at pantay-pantay ang sukat ng bawat box */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    justify-content: center; /* Inilalagay sa gitna ng screen */
+    align-content: center;
+    gap: 15px; /* Pantay na agwat o espasyo bawat box */
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.box{
+    background-color: gold; /* Purong yellow/gold background ng box */
+    background-image: none; 
+    font-size: 1.2rem; /* Mas maliit na text para hindi masyadong malaki */
+    padding: 1rem;
+    text-align: center; /* Naka-center ang text sa loob */
+    border-radius: 6px; /* Bahagyang pabilog ang mga sulok para mas malinis tingnan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Ginawang itim ang text/mga link sa loob ng box */
+.box a {
+    color: #000000; 
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.box a:hover {
+    color: #ffffff; /* Magiging puti kapag itinapat ang mouse */
 }
 
 .link{
-    color: yellow;
     background-image: linear-gradient(90deg, #ffff, #ff4b90);
     background-clip: text;
     -webkit-background-clip: text;
@@ -45,6 +52,5 @@ body{
     color: transparent;
     display: inline-block; 
     font-family: Arial;
-    outline: white;
     text-decoration: none;
 }
