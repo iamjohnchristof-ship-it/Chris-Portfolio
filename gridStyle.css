@@ -1,50 +1,52 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #595959; /* Gray background ng website */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    min-height: 100vh;
-}
-
-.container{
+.container {
     display: grid;
-    /* Ginawa itong responsive at pantay-pantay ang sukat ng bawat box */
     grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
-    justify-content: center; /* Inilalagay sa gitna ng screen */
+    justify-content: center;
     align-content: center;
-    gap: 15px; /* Pantay na agwat o espasyo bawat box */
+    gap: 15px;
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
 }
 
-.box{
-    background-color: gold; /* Purong yellow/gold background ng box */
+.box {
+    background-color: gold; 
     background-image: none; 
-    font-size: 1.2rem; /* Mas maliit na text para hindi masyadong malaki */
+    font-size: 1.2rem;
     padding: 1rem;
-    text-align: center; /* Naka-center ang text sa loob */
-    border-radius: 6px; /* Bahagyang pabilog ang mga sulok para mas malinis tingnan */
+    text-align: center;
+    border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ginawang itim ang text/mga link sa loob ng box */
+.box:hover {
+    transform: translateY(-5px);
+    background-color: #000000;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
 .box a {
     color: #000000; 
     text-decoration: none;
     display: block;
     font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: color 0.3s ease;
 }
 
-.box a:hover {
-    color: #ffffff; /* Magiging puti kapag itinapat ang mouse */
+.box:hover a {
+    color: gold;
 }
 
-.link{
+.link {
     background-image: linear-gradient(90deg, #ffff, #ff4b90);
     background-clip: text;
     -webkit-background-clip: text;
