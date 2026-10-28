@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Matching Drag-and-Drop Game</title>
+    <link rel="stylesheet" href="DragandDrop.css">
+</head>
+<body>
+
+    <div class="game-header">
+        <h1>Match the Word</h1>
+        <p><strong>Instructions:</strong> Drag each word to its correct definition box below!</p>
+    </div>
+
+    <div class="draggable-container">
+        <div class="box" draggable="true" id="word1">Sun</div>
+        <div class="box" draggable="true" id="word2">Water</div>
+        <div class="box" draggable="true" id="word3">Triangle</div>
+        <div class="box" draggable="true" id="word4">Photosynthesis</div>
+        <div class="box" draggable="true" id="word5">Gravity</div>
+        <div class="box" draggable="true" id="word6">Mammal</div>
+        <div class="box" draggable="true" id="word7">Continent</div>
+        <div class="box" draggable="true" id="word8">Volcano</div>
+        <div class="box" draggable="true" id="word9">Fossil</div>
+        <div class="box" draggable="true" id="word10">Atom</div>
+    </div>
+
+    <!-- Scrambled definition boxes for a fun challenge -->
+    <div class="droppable-container">
+        <div class="dropable" drop-zone="word5">The invisible force that pulls objects toward the ground.</div>
+        <div class="dropable" drop-zone="word2">A clear liquid essential for life, found in rivers and oceans.</div>
+        <div class="dropable" drop-zone="word8">A mountain that can erupt with molten rock and ash.</div>
+        <div class="dropable" drop-zone="word1">The bright star at the center of our solar system.</div>
+        <div class="dropable" drop-zone="word10">The basic building block of all matter in the universe.</div>
+        <div class="dropable" drop-zone="word3">A geometric shape with three straight sides and three angles.</div>
+        <div class="dropable" drop-zone="word7">One of the Earth's seven main large landmasses.</div>
+        <div class="dropable" drop-zone="word4">The process plants use to turn sunlight into food.</div>
+        <div class="dropable" drop-zone="word9">The preserved remains of ancient plants or animals in rock.</div>
+        <div class="dropable" drop-zone="word6">A warm-blooded animal with hair or fur that feeds milk to its young.</div>
+    </div>
+
+    <div class="display">
+        <p>Remarks: <span id="remarks">Drag a word to start!</span></p>
+        <p>Score: <span id="scores">0</span> / 10</p>
+    </div>
+
+    <script src="DragandDrop.js"></script>
+    <center>
+        <a href="index.html">Home</a>
+    </center>
+</body>
+</html>
