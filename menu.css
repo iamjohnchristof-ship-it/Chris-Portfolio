@@ -1,4 +1,4 @@
-* {
+- {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,6 +9,8 @@ body {
   color: #ffffff;
   font-family: 'Segoe UI', Arial, sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -109,6 +111,77 @@ h2.myFont {
   text-align: center;
 }
 
+/* --- FOOTER STYLING --- */
+
+main {
+  flex: 1;
+}
+
+.site-footer {
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-top {
+  background-color: #fde8ee;
+  color: #333333;
+  padding: 30px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-info {
+  max-width: 550px;
+}
+
+.footer-info h3,
+.footer-socials h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+.footer-info p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.footer-socials {
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #b0008e;
+  font-size: 18px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  background: linear-gradient(90deg, #b0008e 0%, #d800a6 50%, #b0008e 100%);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #ffffff;
+  font-size: 11px;
+  margin: 0;
+}
+
 @media (max-width: 650px) {
   .nav-list {
     flex-wrap: wrap;
@@ -126,5 +199,11 @@ h2.myFont {
 
   h1.myFont {
     font-size: 32px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 5%;
   }
 }
