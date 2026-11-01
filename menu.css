@@ -1,4 +1,4 @@
-* {
+- {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,13 +9,6 @@ body {
   color: #ffffff;
   font-family: 'Segoe UI', Arial, sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Make main content push footer down */
-main, .content-box, .container {
-  flex: 1;
 }
 
 .navbar {
@@ -106,12 +99,24 @@ h2.myFont {
   font-weight: bold;
 }
 
+.content-box {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 800px;
+  background-color: #1a1a1a;
+  border: 2px solid gold;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .footer {
   background-color: #3b3334;
   color: #ffffff;
   font-family: "Segoe UI", sans-serif;
+  bottom: 0;
+  position: absolute;
   width: 100%;
-  margin-top: auto;
+  left: 0;
 }
 
 .footer-content {
@@ -177,17 +182,5 @@ h2.myFont {
 
   h1.myFont {
     font-size: 32px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .footer-text {
-    width: 100%;
   }
 }
