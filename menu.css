@@ -1,4 +1,4 @@
-- {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
   background-color: #121212;
   color: #ffffff;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   min-height: 100vh;
 }
 
@@ -30,43 +30,81 @@ body {
   padding: 0 10px;
 }
 
-.nav-link, .nav-linka {
+.nav-link {
   display: block;
   padding: 14px 20px;
   color: #000000; 
   text-decoration: none;
-  font-family: 'Segoe UI', sans-serif;
   font-size: 15px;
   font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.nav-link:link, .nav-linka:link {
+.nav-linka {
+  display: block;
+  padding: 14px 20px;
+  color: #000000; 
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-link:link {
   color: #000000;
 }
 
-.nav-link:visited, .nav-linka:visited {
+.nav-linka:link {
+  color: #000000;
+}
+
+.nav-link:visited {
   color: #333333;
 }
 
-.nav-link:hover, .nav-linka:hover {
+.nav-linka:visited {
+  color: #333333;
+}
+
+.nav-link:hover {
   background-color: #000000;
   color: gold;
 }
 
-.nav-link:focus, .nav-linka:focus {
+.nav-linka:hover {
+  background-color: #000000;
+  color: gold;
+}
+
+.nav-link:focus {
   outline: 3px solid #000000;
   outline-offset: -3px;
   background-color: #000000;
   color: gold;
 }
 
-.nav-link:active, .nav-linka:active {
+.nav-linka:focus {
+  outline: 3px solid #000000;
+  outline-offset: -3px;
+  background-color: #000000;
+  color: gold;
+}
+
+.nav-link:active {
   background-color: #000000;
   transform: translateY(1px);
 }
 
-.nav-link.active, .nav-linka.active {
+.nav-linka:active {
+  background-color: #000000;
+  transform: translateY(1px);
+}
+
+.nav-link.active {
+  background-color: #000000;
+  border-bottom: 4px solid gold;
+  color: gold;
+}
+
+.nav-linka.active {
   background-color: #000000;
   border-bottom: 4px solid gold;
   color: gold;
@@ -171,7 +209,12 @@ h2.myFont {
     justify-content: center;
   }
   
-  .nav-link, .nav-linka {
+  .nav-link {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .nav-linka {
     padding: 10px 14px;
     font-size: 14px;
   }
