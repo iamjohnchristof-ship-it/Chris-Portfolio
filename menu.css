@@ -111,7 +111,7 @@ h2.myFont {
   text-align: center;
 }
 
-/* --- FOOTER STYLING --- */
+/* --- FOOTER STYLING (YELLOW, BLACK & WHITE SCHEME) --- */
 
 main {
   flex: 1;
@@ -120,11 +120,12 @@ main {
 .site-footer {
   width: 100%;
   margin-top: auto;
+  border-top: 2px solid gold;
 }
 
 .footer-top {
-  background-color: #fde8ee;
-  color: #333333;
+  background-color: #1a1a1a;
+  color: #ffffff;
   padding: 30px 8%;
   display: flex;
   justify-content: space-between;
@@ -138,16 +139,16 @@ main {
 
 .footer-info h3,
 .footer-socials h3 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #222222;
+  color: gold;
 }
 
 .footer-info p {
-  font-size: 11px;
-  line-height: 1.5;
-  color: #666666;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #dddddd;
 }
 
 .footer-socials {
@@ -160,25 +161,27 @@ main {
 }
 
 .social-icons a {
-  color: #b0008e;
+  color: #ffffff;
   font-size: 18px;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .social-icons a:hover {
-  opacity: 0.8;
+  color: gold;
+  transform: translateY(-2px);
 }
 
 .footer-bottom {
-  background: linear-gradient(90deg, #b0008e 0%, #d800a6 50%, #b0008e 100%);
-  padding: 10px 0;
+  background-color: gold;
+  padding: 12px 0;
   text-align: center;
 }
 
 .footer-bottom p {
-  color: #ffffff;
-  font-size: 11px;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
   margin: 0;
 }
 
