@@ -1,4 +1,4 @@
-*{
+{
   margin: 0;
 
   padding: 0;
@@ -229,76 +229,30 @@ h2.myFont {
 
   }
 
+  
+
   .nav-link, .nav-linka {
+
     padding: 10px 14px;
+
     font-size: 14px;
 
   }
 
+
+
   .gradientTextHeader {
+
     font-size: 36px;
 
   }
 
+
+
   h1.myFont {
+
     font-size: 32px;
 
   }
-  .footer {
-    background-color: #555454;
-    color: #000000;
-    font-family: "Segoe UI", sans-serif;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    left: 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 8%;
-    height: 110px;
-}
-
-.footer-text {
-    width: 50%;
-}
-
-.footer-text p {
-    margin: 10px 15px;
-    font-size: 12px;
-}
-
-.footer-social {
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
-}
-
-.social-links a {
-    color: #3a3a3a;
-    font-size: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    color: #ffe700;
-}
-
-.footer-bottom {
-    background-color: #ffd600;
-    color: #000000;
-    text-align: center;
-    padding: 10px;
-    font-size: 12px;
-}
-
 
 } 
