@@ -1,258 +1,130 @@
-{
+* {
   margin: 0;
-
   padding: 0;
-
   box-sizing: border-box;
-
 }
-
-
 
 body {
-
   background-color: #121212;
-
   color: #ffffff;
-
   font-family: 'Segoe UI', Arial, sans-serif;
-
   min-height: 100vh;
-
 }
-
-
 
 .navbar {
-
   background-color: gold; 
-
   width: 100%;
-
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
-
 }
-
-
 
 .nav-list {
-
   display: flex;
-
   flex-direction: row;
-
   justify-content: flex-start;
-
   align-items: center;
-
   list-style-type: none;
-
   margin: 0;
-
   padding: 0 10px;
-
 }
 
-
-
-.nav-link, .nav-linka {
-
+.nav-link {
   display: block;
-
   padding: 14px 20px;
-
   color: #000000; 
-
   text-decoration: none;
-
   font-family: 'Segoe UI', sans-serif;
-
   font-size: 15px;
-
   font-weight: 600;
-
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-
 }
 
-
-
-.nav-link:link, .nav-linka:link {
-
+.nav-link:link {
   color: #000000;
-
 }
 
-
-
-.nav-link:visited, .nav-linka:visited {
-
+.nav-link:visited {
   color: #333333;
-
 }
 
-
-
-.nav-link:hover, .nav-linka:hover {
-
+.nav-link:hover {
   background-color: #000000;
-
   color: gold;
-
 }
 
-
-
-.nav-link:focus, .nav-linka:focus {
-
+.nav-link:focus {
   outline: 3px solid #000000;
-
   outline-offset: -3px;
-
   background-color: #000000;
-
   color: gold;
-
 }
 
-
-
-.nav-link:active, .nav-linka:active {
-
+.nav-link:active {
   background-color: #000000;
-
   transform: translateY(1px);
-
 }
 
-
-
-.nav-link.active, .nav-linka.active {
-
+.nav-link.active {
   background-color: #000000;
-
   border-bottom: 4px solid gold;
-
   color: gold;
-
 }
-
-
 
 .myFont {
-
   font-family: Arial, sans-serif;
-
   color: gold;
-
 }
-
-
 
 h1.myFont {
-
   font-size: 42px;
-
   margin-top: 20px;
-
 }
-
-
 
 h2.myFont {
-
   font-size: 24px;
-
   color: #ffffff;
-
 }
-
-
 
 .gradientTextHeader {
-
   background-image: linear-gradient(90deg, gold, #ffe066);
-
   background-clip: text;
-
   -webkit-background-clip: text;
-
   -webkit-text-stroke: 0.5px #000000;
-
   color: transparent;
-
   display: inline-block; 
-
   font-family: Arial, sans-serif;
-
   font-size: 50px;
-
   font-weight: bold;
-
 }
-
-
 
 .content-box {
-
   margin: 40px auto;
-
   padding: 30px;
-
   max-width: 800px;
-
   background-color: #1a1a1a;
-
   border: 2px solid gold;
-
   border-radius: 10px;
-
   text-align: center;
-
 }
 
-
-
 @media (max-width: 650px) {
-
   .nav-list {
-
     flex-wrap: wrap;
-
     justify-content: center;
-
   }
-
   
-
-  .nav-link, .nav-linka {
-
+  .nav-link {
     padding: 10px 14px;
-
     font-size: 14px;
-
   }
-
-
 
   .gradientTextHeader {
-
     font-size: 36px;
-
   }
-
-
 
   h1.myFont {
-
     font-size: 32px;
-
   }
-
-} 
+}
