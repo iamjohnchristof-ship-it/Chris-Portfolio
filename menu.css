@@ -9,6 +9,13 @@ body {
   color: #ffffff;
   font-family: 'Segoe UI', Arial, sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make main content push footer down */
+main, .content-box, .container {
+  flex: 1;
 }
 
 .navbar {
@@ -109,6 +116,60 @@ h2.myFont {
   text-align: center;
 }
 
+.footer {
+  background-color: #3b3334;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 8%;
+  height: 110px;
+}
+
+.footer-text {
+  width: 50%;
+}
+
+.footer-text p {
+  margin: 10px 15px;
+  font-size: 12px;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #ffe700;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  color: #e535e5;
+}
+
+.footer-bottom {
+  background-color: #ffe700;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
 @media (max-width: 650px) {
   .nav-list {
     flex-wrap: wrap;
@@ -127,60 +188,16 @@ h2.myFont {
   h1.myFont {
     font-size: 32px;
   }
-  .footer {
-    background-color: #3b3334;
-    color: #ffffff;
-    font-family: "Segoe UI", sans-serif;
-    bottom: 0;
-    position: absolute;
+
+  .footer-content {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .footer-text {
     width: 100%;
-    left: 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 8%;
-    height: 110px;
-}
-
-.footer-text {
-    width: 50%;
-}
-
-.footer-text p {
-    margin: 10px 15px;
-    font-size: 12px;
-}
-
-.footer-social {
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
-}
-
-.social-links a {
-    color: #ffe700;
-    font-size: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    color: #e535e5;
-}
-
-.footer-bottom {
-    background-color: #ffe700;
-    color: #000000;
-    text-align: center;
-    padding: 10px;
-    font-size: 12px;
-}
-
+  }
 }
