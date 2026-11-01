@@ -30,7 +30,7 @@ body {
   padding: 0 10px;
 }
 
-.nav-link {
+.nav-link, .nav-linka {
   display: block;
   padding: 14px 20px;
   color: #000000; 
@@ -41,32 +41,32 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.nav-link:link {
+.nav-link:link, .nav-linka:link {
   color: #000000;
 }
 
-.nav-link:visited {
+.nav-link:visited, .nav-linka:visited {
   color: #333333;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-linka:hover {
   background-color: #000000;
   color: gold;
 }
 
-.nav-link:focus {
+.nav-link:focus, .nav-linka:focus {
   outline: 3px solid #000000;
   outline-offset: -3px;
   background-color: #000000;
   color: gold;
 }
 
-.nav-link:active {
+.nav-link:active, .nav-linka:active {
   background-color: #000000;
   transform: translateY(1px);
 }
 
-.nav-link.active {
+.nav-link.active, .nav-linka.active {
   background-color: #000000;
   border-bottom: 4px solid gold;
   color: gold;
@@ -115,7 +115,7 @@ h2.myFont {
     justify-content: center;
   }
   
-  .nav-link {
+  .nav-link, .nav-linka {
     padding: 10px 14px;
     font-size: 14px;
   }
