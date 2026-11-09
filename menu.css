@@ -1,14 +1,17 @@
-* {
+- {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background-color: #121212;
   color: #ffffff;
   font-family: Arial, sans-serif;
   min-height: 100vh;
+  height: auto;
+  overflow-y: auto;                 
+  -webkit-overflow-scrolling: touch;
 }
 
 .navbar {
@@ -141,10 +144,8 @@ h2.myFont {
   background-color: #3b3334;
   color: #ffffff;
   font-family: "Segoe UI", sans-serif;
-  bottom: 0;
-  position: absolute;
   width: 100%;
-  left: 0;
+  position: relative; /* Fixed absolute positioning lock that blocked scrolling */
 }
 
 .footer-content {
