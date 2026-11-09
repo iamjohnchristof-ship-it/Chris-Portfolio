@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DraganddropSample</title>
+    <link rel="stylesheet" href="draganddropsample.css">
+</head>
+<body>
+
+    <div class="draggable-container">
+        <div class="box" draggable="true" id="box1">Sinigang na</div>
+        <div class="box" draggable="true" id="box2">Adobong</div>
+        <div class="box" draggable="true" id="box3">itlog w tuna</div>
+        <div class="box" draggable="true" id="box4">Di kanya</div>
+    </div>
+
+    <div class="droppable-container">
+        <div class="dropable" drop-zone="box1">Baboy</div>
+        <div class="dropable" drop-zone="box2">manok</div>
+        <div class="dropable" drop-zone="box3">Protein maxxing</div>
+        <div class="dropable" drop-zone="box4">Mahal</div>
+    </div>
+
+    <div class="display">
+        <p>Remarks: <span id="remarks"></span></p>
+        <p>Score: <span id="scores">0</span></p>
+    </div>
+    <script src="draganddropsample.js"></script>
+    <a href = "index.html">home</a>
+</body>
+</html>
