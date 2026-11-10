@@ -9,7 +9,10 @@ html, body {
   color: #ffffff;
   font-family: Arial, sans-serif;
   min-height: 100vh;
-  height: auto;
+  height: 100%;                
+  margin: 0;
+  display: flex;
+  flex-direction: column;     
   overflow-y: auto;                 
   -webkit-overflow-scrolling: touch;
 }
@@ -146,6 +149,7 @@ h2.myFont {
   font-family: "Segoe UI", sans-serif;
   width: 100%;
   position: relative;
+  margin-top: auto;            
 }
 
 .footer-content {
