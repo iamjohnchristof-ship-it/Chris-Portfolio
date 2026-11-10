@@ -1,4 +1,4 @@
-- {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -145,7 +145,7 @@ h2.myFont {
   color: #ffffff;
   font-family: "Segoe UI", sans-serif;
   width: 100%;
-  position: relative; /* Fixed absolute positioning lock that blocked scrolling */
+  position: relative;
 }
 
 .footer-content {
