@@ -12,9 +12,13 @@ html, body {
   height: 100%;                
   margin: 0;
   display: flex;
-  flex-direction: column;     
-  overflow-y: auto;                 
+  flex-direction: column;      
+  overflow-y: auto;                  
   -webkit-overflow-scrolling: touch;
+}
+
+main, .main-content, .container, section {
+  flex: 1;
 }
 
 .navbar {
