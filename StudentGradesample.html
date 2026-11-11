@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Grades sample</title>    
+  <title>Save Grades</title>    
     <style>
      .Container {
         display: flex;
@@ -39,7 +39,6 @@
 
   <input type="button" id="btnSave" name="btnSave" value="Submit">
   <input type="button" id="btnUpdate" name="btnUpdate" value="Update" disabled>
-  <input type="button" id="btnClear" name="btnClear" value="Clear All"><br>
   <p id="message"></p>
 
   <table border="2">
@@ -63,7 +62,6 @@
   var txtGrade = document.getElementById("txtGrade");
   var btnSave = document.getElementById("btnSave");
   var btnUpdate = document.getElementById("btnUpdate");
-  var btnClear = document.getElementById("btnClear");
   var message = document.getElementById("message");
   var tableBody = document.getElementById("tableBody");
 
@@ -163,16 +161,6 @@
     if (grades.length === 0) {
       message.textContent = "The table is already empty.";
       return;
-    }
-    if (confirm("Are you sure you want to delete all saved grades?")) {
-      localStorage.removeItem("grades");
-      grades = [];
-      editingIndex = -1;
-      btnSave.disabled = false;
-      btnUpdate.disabled = true;
-      clearInputs();
-      showGrades();
-      message.textContent = "All records have been cleared.";
     }
   }
 
