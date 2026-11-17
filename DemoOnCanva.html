@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+    <style>
+        #myDrawing{
+            border:solid 2px rgb(125, 231, 255);
+        }
+
+        body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+
+        canvas {
+            background-color: #cce7ff; 
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    </style>
+
+</head>
+<body>
+    <canvas height ="500" width="1000" id="myDrawing">
+
+    </canvas>
+
+
+    <script>
+        const canvas = document.getElementById("myDrawing");
+        const ctx = canvas.getContext("2d");
+
+        
+        ctx.fillStyle = 'SaddleBrown';
+        ctx.fillRect(575, 350, 50, 120); // x, y, width, height
+
+    
+        ctx.fillStyle = 'DarkGreen';
+
+
+        ctx.beginPath();
+        ctx.moveTo(600, 140);
+        ctx.lineTo(460, 350);
+        ctx.lineTo(740, 350);
+        ctx.closePath();
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.moveTo(600, 80);
+        ctx.lineTo(490, 250);
+        ctx.lineTo(710, 250);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(600, 40);
+        ctx.lineTo(520, 160);
+        ctx.lineTo(680, 160);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = '#FFD700';
+        ctx.beginPath();
+        ctx.moveTo(600, 10);
+        ctx.lineTo(607, 25);
+        ctx.lineTo(623, 25);
+        ctx.lineTo(610, 35);
+        ctx.lineTo(615, 50);
+        ctx.lineTo(600, 40);
+        ctx.lineTo(585, 50);
+        ctx.lineTo(590, 35);
+        ctx.lineTo(577, 25);
+        ctx.lineTo(593, 25);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+    ctx.arc(150, 80, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(300, 150, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(420, 60, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(220, 300, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(380, 380, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(780, 90, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(900, 180, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(820, 320, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(1020, 120, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(980, 360, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    </script>
+
+</body>
+</html>
