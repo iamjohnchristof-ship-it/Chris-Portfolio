@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardthemecanva</title>
+  <style>
+    body {
+      background-color: rgb(122, 114, 114);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    canvas {
+      border: 1px solid #cccccc;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="Cardthemecanva" width="1100" height="650"></canvas>
+
+  <script>
+    const canvas = document.getElementById("Cardthemecanva");
+    const ctx = canvas.getContext("2d");
+
+
+    function drawNightBackground() {
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(1100, 0);
+      ctx.lineTo(1100, 650);
+      ctx.lineTo(0, 650);
+      ctx.closePath();
+      ctx.fillStyle = "#0b132b";
+      ctx.fill();
+    }
+
+    function drawMoon() {
+      ctx.beginPath();
+      ctx.arc(140, 125, 45, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fillStyle = "#fefae0";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(160, 113, 38, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fillStyle = "#0b132b";
+      ctx.fill();
+    }
+
+
+    function drawSnowGround() {
+
+      ctx.beginPath();
+      ctx.moveTo(0, 550);
+      ctx.arc(350, 950, 440, Math.PI * 1.25, Math.PI * 1.75);
+      ctx.lineTo(1100, 550);
+      ctx.lineTo(1100, 650);
+      ctx.lineTo(0, 650);
+      ctx.closePath();
+      ctx.fillStyle = "#e2e8f0";
+      ctx.fill();
+
+      // Front snow bank
+      ctx.beginPath();
+      ctx.moveTo(0, 575);
+      ctx.arc(750, 980, 450, Math.PI * 1.25, Math.PI * 1.75);
+      ctx.lineTo(1100, 575);
+      ctx.lineTo(1100, 650);
+      ctx.lineTo(0, 650);
+      ctx.closePath();
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+    }
+
+
+    function drawWhiteSnow() {
+      for (let i = 0; i < 65; i++) {
+       
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * 540;
+
+       
+        const radius = Math.random() * 3 + 2;
+
+     
+        ctx.fillStyle = "#ffffff";
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
+
+    function drawTreeTrunk() {
+      ctx.beginPath();
+      ctx.moveTo(725, 470);
+      ctx.lineTo(775, 470);
+      ctx.lineTo(780, 555);
+      ctx.lineTo(720, 555);
+      ctx.closePath();
+      ctx.fillStyle = "#5c3a21";
+      ctx.fill();
+      ctx.strokeStyle = "#3d2514";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+
+    function drawTreeFoliage() {
+     
+      ctx.beginPath();
+      ctx.moveTo(750, 260);
+      ctx.lineTo(580, 475);
+      ctx.lineTo(920, 475);
+      ctx.closePath();
+      ctx.fillStyle = "#1b4332";
+      ctx.fill();
+      ctx.strokeStyle = "#081c15";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+   
+      ctx.beginPath();
+      ctx.moveTo(750, 165);
+      ctx.lineTo(610, 345);
+      ctx.lineTo(890, 345);
+      ctx.closePath();
+      ctx.fillStyle = "#2d6a4f";
+      ctx.fill();
+      ctx.strokeStyle = "#081c15";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(750, 80);
+      ctx.lineTo(645, 225);
+      ctx.lineTo(855, 225);
+      ctx.closePath();
+      ctx.fillStyle = "#40916c";
+      ctx.fill();
+      ctx.strokeStyle = "#081c15";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+    function drawTreeStar() {
+      ctx.beginPath();
+      ctx.moveTo(750, 42);
+      ctx.lineTo(757, 62);
+      ctx.lineTo(778, 62);
+      ctx.lineTo(761, 74);
+      ctx.lineTo(767, 94);
+      ctx.lineTo(750, 82);
+      ctx.lineTo(733, 94);
+      ctx.lineTo(739, 74);
+      ctx.lineTo(722, 62);
+      ctx.lineTo(743, 62);
+      ctx.closePath();
+      ctx.fillStyle = "#ffd166";
+      ctx.fill();
+      ctx.strokeStyle = "#f4a261";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+
+    function drawOrnaments() {
+      const ornaments = [
+        [750, 140, 9, "#ef476f"],
+        [715, 190, 9, "#ffd166"],
+        [785, 195, 9, "#06d6a0"],
+        [750, 250, 10, "#118ab2"],
+        [690, 280, 10, "#ef476f"],
+        [810, 285, 10, "#ffd166"],
+        [660, 325, 10, "#06d6a0"],
+        [740, 320, 10, "#ff9f1c"],
+        [840, 325, 10, "#ef476f"],
+        [750, 375, 11, "#ffd166"],
+        [675, 395, 11, "#118ab2"],
+        [825, 395, 11, "#06d6a0"],
+        [630, 448, 11, "#ef476f"],
+        [705, 442, 11, "#ff9f1c"],
+        [790, 445, 11, "#118ab2"],
+        [870, 448, 11, "#ef476f"]
+      ];
+
+      for (let i = 0; i < ornaments.length; i++) {
+        ctx.beginPath();
+        ctx.arc(ornaments[i][0], ornaments[i][1], ornaments[i][2], 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fillStyle = ornaments[i][3];
+        ctx.fill();
+        ctx.strokeStyle = "#ffffff";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+    }
+
+    function drawFiveGifts() {
+      ctx.beginPath();
+      ctx.moveTo(525, 495);
+      ctx.lineTo(575, 495);
+      ctx.lineTo(575, 585);
+      ctx.lineTo(525, 585);
+      ctx.closePath();
+      ctx.fillStyle = "#e63946";
+      ctx.fill();
+      ctx.strokeStyle = "#1d3557";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(545, 495);
+      ctx.lineTo(555, 495);
+      ctx.lineTo(555, 585);
+      ctx.lineTo(545, 585);
+      ctx.closePath();
+      ctx.fillStyle = "#ffd166";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(525, 535);
+      ctx.lineTo(575, 535);
+      ctx.lineTo(575, 545);
+      ctx.lineTo(525, 545);
+      ctx.closePath();
+      ctx.fillStyle = "#ffd166";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(595, 525);
+      ctx.lineTo(660, 525);
+      ctx.lineTo(660, 590);
+      ctx.lineTo(595, 590);
+      ctx.closePath();
+      ctx.fillStyle = "#118ab2";
+      ctx.fill();
+      ctx.strokeStyle = "#073b4c";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+   
+      ctx.beginPath();
+      ctx.moveTo(623, 525);
+      ctx.lineTo(632, 525);
+      ctx.lineTo(632, 590);
+      ctx.lineTo(623, 590);
+      ctx.closePath();
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(595, 553);
+      ctx.lineTo(660, 553);
+      ctx.lineTo(660, 562);
+      ctx.lineTo(595, 562);
+      ctx.closePath();
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(715, 562, 34, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fillStyle = "#9b5de5";
+      ctx.fill();
+      ctx.strokeStyle = "#240046";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(710, 528);
+      ctx.lineTo(720, 528);
+      ctx.lineTo(720, 596);
+      ctx.lineTo(710, 596);
+      ctx.closePath();
+      ctx.fillStyle = "#fee440";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(681, 557);
+      ctx.lineTo(749, 557);
+      ctx.lineTo(749, 567);
+      ctx.lineTo(681, 567);
+      ctx.closePath();
+      ctx.fillStyle = "#fee440";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(772, 532);
+      ctx.lineTo(838, 532);
+      ctx.lineTo(850, 590);
+      ctx.lineTo(760, 590);
+      ctx.closePath();
+      ctx.fillStyle = "#06d6a0";
+      ctx.fill();
+      ctx.strokeStyle = "#081c15";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(800, 532);
+      ctx.lineTo(810, 532);
+      ctx.lineTo(812, 590);
+      ctx.lineTo(798, 590);
+      ctx.closePath();
+      ctx.fillStyle = "#ef476f";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(766, 557);
+      ctx.lineTo(844, 557);
+      ctx.lineTo(846, 566);
+      ctx.lineTo(764, 566);
+      ctx.closePath();
+      ctx.fillStyle = "#ef476f";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(890, 512);
+      ctx.lineTo(930, 512);
+      ctx.lineTo(950, 548);
+      ctx.lineTo(930, 584);
+      ctx.lineTo(890, 584);
+      ctx.lineTo(870, 548);
+      ctx.closePath();
+      ctx.fillStyle = "#ff9f1c";
+      ctx.fill();
+      ctx.strokeStyle = "#5f0f40";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(905, 512);
+      ctx.lineTo(915, 512);
+      ctx.lineTo(915, 584);
+      ctx.lineTo(905, 584);
+      ctx.closePath();
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(870, 543);
+      ctx.lineTo(950, 543);
+      ctx.lineTo(950, 553);
+      ctx.lineTo(870, 553);
+      ctx.closePath();
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+    }
+
+    function drawCompositionBorder() {
+
+      ctx.beginPath();
+      ctx.moveTo(20, 20);
+      ctx.lineTo(1080, 20);
+      ctx.lineTo(1080, 630);
+      ctx.lineTo(20, 630);
+      ctx.closePath();
+      ctx.strokeStyle = "#ffd166";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(30, 30);
+      ctx.lineTo(1070, 30);
+      ctx.lineTo(1070, 620);
+      ctx.lineTo(30, 620);
+      ctx.closePath();
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      const corners = [
+        [30, 30],
+        [1070, 30],
+        [1070, 620],
+        [30, 620]
+      ];
+
+      for (let i = 0; i < corners.length; i++) {
+        ctx.beginPath();
+        ctx.arc(corners[i][0], corners[i][1], 10, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fillStyle = "#0b132b";
+        ctx.fill();
+        ctx.strokeStyle = "#ffd166";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+    }
+
+
+    function drawGreetingText() {
+      ctx.fillStyle = "#ffd166";
+      ctx.font = "bold 50px Georgia, serif";
+      ctx.textAlign = "center";
+      ctx.fillText("MERRY", 295, 300);
+      ctx.fillText("CHRISTMAS!", 295, 360);
+
+      ctx.fillStyle = "#e2e8f0";
+      ctx.font = "italic 22px Georgia, serif";
+      ctx.fillText("Warm wishes on a snowy winter night", 295, 405);
+    }
+
+   
+    drawNightBackground();
+    drawMoon();
+    drawSnowGround();
+    drawWhiteSnow();
+    drawTreeTrunk();
+    drawTreeFoliage();
+    drawTreeStar();
+    drawOrnaments();
+    drawFiveGifts();
+    drawCompositionBorder();
+    drawGreetingText();
+  </script>
+
+</body>
+</html>
