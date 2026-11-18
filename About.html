@@ -1,49 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Chris Soriano</title>
-    <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Chris Soriano</title>
+  
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $("#accordion").accordion({
+        collapsible: true,
+        heightStyle: "auto" /* Prevents shrinking and keeps a stable, spacious layout when switching */
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .header-section {
+      text-align: center;
+      margin: 40px 0 20px 0;
+    }
+
+    .header-section h1 {
+      color: #ffd700;
+      font-size: 3.2rem; /* Much larger title */
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .header-section h2 {
+      color: #b0b0b0;
+      font-size: 1.4rem; /* Much larger subtitle */
+      font-weight: normal;
+    }
+
+    /* Enlarged Accordion Container to match your page width */
+    #accordion {
+      max-width: 950px; /* Made much wider and bigger */
+      min-height: 380px;
+      margin: 30px auto 70px auto;
+      padding: 0 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Accordion Headers - Bold, large, and spacious */
+    .ui-accordion-header {
+      background: #080808;
+      color: #d4af37;
+      border: 1px solid #333333;
+      border-radius: 8px;
+      font-size: 1.25rem; /* Larger header text */
+      font-weight: bold;
+      padding: 18px 24px;
+      margin-top: 14px;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .ui-accordion-header:hover {
+      background: #1f1f1f;
+      color: #ffd700;
+      border-color: #d4af37;
+    }
+
+    .ui-accordion-header.ui-state-active {
+      background: #181818;
+      color: #ffd700;
+      border: 1px solid #d4af37;
+      border-bottom: 3px solid #ffd700;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .ui-accordion-header .ui-icon {
+      transform: scale(1.4); /* Makes the dropdown arrow bigger */
+      filter: brightness(0) saturate(100%) invert(76%) sepia(43%) saturate(650%) hue-rotate(6deg) brightness(93%) contrast(90%);
+    }
+
+    /* Accordion Content Panels - Large readable text */
+    .ui-accordion-content {
+      background-color: #1a1a1a;
+      color: #eaeaea;
+      border: 1px solid #333333;
+      border-top: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      font-size: 1.15rem; /* Much bigger body text */
+      line-height: 1.8;
+      padding: 24px 28px;
+    }
+
+    .ui-accordion-content ul, 
+    .ui-accordion-content ol {
+      margin: 0;
+      padding-left: 25px;
+    }
+
+    .ui-accordion-content li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="LandingPage.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="About.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <center>
-        <h1 class="gradientTextHeader">About Me</h1>
-        <h2 class="myFont">Grade 12 - Cooper</h2>
-    </center>
 
-      <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-text">
-                <h3>Stay Connected!</h3>
-                <p>
-                    Thank you for visiting my website. 
-                </p>
-            </div>
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-            <div class="footer-social">
-                <h3>My Socials</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/">f</a>
-                    <a href="https://www.youtube.com/">▶</a>
-                    <a href="https://www.instagram.com/">in</a>
-                </div>
-            </div>
+  <div class="header-section">
+    <h1 class="gradientTextHeader">About Me</h1>
+    <h2 class="myFont">Grade 12 - Cooper</h2>
+  </div>
+
+  <!-- jQuery UI Accordion -->
+  <div id="accordion">
+    <h3>About Me</h3>
+    <div>
+      <p>I am a Grade 12 ICT student in Section Cooper passionate about Java programming, frontend web development, and clean minimalist design.</p>
+    </div>
+    
+    <h3>Achievements</h3>
+    <div>
+      <ol>
+        <li>Practical Research 2 Proposal Defense (Java Programming Performance)</li>
+        <li>Integrated Multi-Page Portfolio Website on GitHub Pages</li>
+        <li>Add your other achievements here</li>
+      </ol>
+    </div>
+    
+    <h3>Favorite Artist</h3>
+    <div>
+      <ul>
+        <li>Ice Cube</li>
+        <li>Add your favorite artists here</li>
+      </ul>
+    </div>
+    
+    <h3>My Favorite Games</h3>
+    <div>
+      <ol>
+        <li>Add your favorite games here</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        <h3>Stay Connected!</h3>
+        <p>
+          "Thank you for visiting my website. Connect with me on social media
+          or reach out via email for collaborations and inquiries. Your
+          support and feedback are greatly appreciated."
+        </p>
+      </div>
+      <div class="footer-social">
+        <h3>My Socials</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/">f</a>
+          <a href="https://www.youtube.com/">▶</a>
+          <a href="https://www.linkedin.com/">in</a>
         </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©2026 CHRIZ CORP</p>
+    </div>
+  </footer>
 
-        <div class="footer-bottom">
-            <p>©2026 CHRIZ CORP</p>
-    </footer>
 </body>
 </html>
