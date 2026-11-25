@@ -3,48 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Chris Soriano</title>
-    <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
+    <title>CHRIZ CORP - Contact</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar - Left-Aligned Gold / Black Theme */
+        nav {
+            background: gold;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 10px;
+            gap: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        nav a {
+            display: block;
+            color: #000000;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        nav a:hover {
+            background: #000000;
+            color: gold;
+        }
+
+        nav a.active {
+            background: #000000;
+            color: #ffe700;
+            border-bottom: 4px solid #ffe700;
+        }
+
+        /* Page Header - Matches Gold / Dark Gray / Black Theme */
+        header {
+            background: #1a1a1a;
+            text-align: center;
+            padding: 35px 20px;
+            border-bottom: 4px solid #ffe700;
+        }
+
+        header h1 {
+            color: #ffe700;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 700px;
+            width: 100%;
+            margin: 50px auto;
+            padding: 0 30px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            width: 100%;
+            background: #1e1e1e;
+            padding: 50px 40px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #2e2e2e;
+            border-top: 6px solid #ffe700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+        }
+
+        .contact-card h2 {
+            font-size: 30px;
+            color: #ffe700;
+            margin-bottom: 14px;
+        }
+
+        .contact-card p {
+            font-size: 18px;
+            color: #e5e5e5;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-block;
+            min-width: 180px;
+            padding: 14px 28px;
+            background: #ffe700;
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 1px solid #ffe700;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+
+        .social-btn:hover {
+            background: #000000;
+            color: #ffe700;
+            transform: translateY(-2px);
+        }
+
+        /* Footer - Matches Gold / Dark Gray / Black Theme */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 15px;
+            border-top: 3px solid #ffe700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0 6px;
+            }
+
+            nav a {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+
+            .container {
+                margin: 30px auto;
+                padding: 0 20px;
+            }
+
+            .contact-card {
+                padding: 35px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="LandingPage.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="Contact.html" class="active">Contact</a>
+    </nav>
+
+    <!-- Page Header -->
     <header>
-        <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="LandingPage.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link active" href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Contact</h1>
     </header>
 
-      <center>
-        <h1 class="gradientTextHeader">Contact</h1>
-        <h2 class="myFont">Get In Touch</h2>
-      </center>
+    <!-- Main Content -->
+    <main class="container">
+        <div class="contact-card">
+            <h2>Feel free to contact me</h2>
+            <p>You can reach out or follow me on my social media accounts below:</p>
 
-      <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-text">
-                <h3>Stay Connected!</h3>
-                <p>
-                    Thank you for visiting my website. 
-                </p>
-            </div>
-
-            <div class="footer-social">
-                <h3>My Socials</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/">f</a>
-                    <a href="https://www.youtube.com/">▶</a>
-                    <a href="https://www.instagram.com/">in</a>
-                </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
             </div>
         </div>
+    </main>
 
-        <div class="footer-bottom">
-            <p>©2026 CHRIZ CORP</p>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CHRIZ CORP | John Christof Soriano</p>
     </footer>
+
 </body>
 </html>
