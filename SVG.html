@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Gold &amp; Black SVG Shapes</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #121212;
+      color: #ffe700;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      max-width: 720px;
+    }
+
+    .card {
+      width: 124px;
+      height: 164px;
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #1e1e1e;
+      border: 2px solid #ffe700;
+    }
+
+    .card--green {
+      background-color: #262212;
+      border-color: gold;
+    }
+
+    .num {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .svg-box {
+      width: 88px;
+      height: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .shape {
+      transition: transform 0.25s ease;
+      transform-box: fill-box;
+      transform-origin: center;
+      cursor: pointer;
+    }
+
+    .card:hover .shape {
+      transform: scale(1.1);
+    }
+
+    .card:hover .shape--spin {
+      transform: scale(1.1) rotate(20deg);
+    }
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <!-- 1. Circle -->
+    <section class="card card--black">
+      <span class="num">1</span>
+      <div class="svg-box">
+        <svg viewBox="0 0 100 100" width="88" height="88" aria-label="Circle">
+          <circle class="shape" cx="50" cy="50" r="36" fill="#ffe700" stroke="#000000" stroke-width="2.5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- 2. Rounded Square -->
+    <section class="card card--green">
+      <span class="num">2</span>
+      <div class="svg-box">
+        <svg viewBox="0 0 100 100" width="88" height="88" aria-label="Rounded Square">
+          <rect class="shape" x="16" y="16" width="68" height="68" rx="12" fill="#121212" stroke="#ffe700" stroke-width="2.5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- 3. Triangle -->
+    <section class="card card--black">
+      <span class="num">3</span>
+      <div class="svg-box">
+        <svg viewBox="0 0 100 100" width="88" height="88" aria-label="Triangle">
+          <polygon class="shape" points="50,15 88,83 12,83" fill="#ffe700" stroke="#000000" stroke-width="2.5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- 4. Hexagon -->
+    <section class="card card--green">
+      <span class="num">4</span>
+      <div class="svg-box">
+        <svg viewBox="0 0 100 100" width="88" height="88" aria-label="Hexagon">
+          <polygon class="shape shape--spin" points="50,14 82,32 82,68 50,86 18,68 18,32" fill="#121212" stroke="#ffe700" stroke-width="2.5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- 5. 5-Point Star -->
+    <section class="card card--black">
+      <span class="num">5</span>
+      <div class="svg-box">
+        <svg viewBox="0 0 100 100" width="88" height="88" aria-label="5-Point Star">
+          <polygon class="shape shape--spin" points="50,12 61,36 87,39 68,57 73,83 50,70 27,83 32,57 13,39 39,36" fill="#ffe700" stroke="#000000" stroke-width="2.5" />
+        </svg>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flexbox</title>
-  <link rel="stylesheet" href="Flex.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex</title>
+  <style>
+    .parent{
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 500px;
+	justify-content: space-between;
+	align-items: stretch;
+}
+.child{
+  background: yellow;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: 250px;
+}
+.child:nth-child(2){
+	background: rgb(80, 80, 86);
+	
+}
+.child:nth-child(3){
+	background: rgb(255, 0, 0);
+	
+}
+.child:nth-child(4){
+	background: Green;
+	
+}
+  </style>
 </head>
 <body>
-  <div class="parent">
-    <div class="child">Oldest Child</div>
-    <div class="child">Peacemaker Child</div>
+	<div class="parent">
+		<div class="child">Older child</div>
+		<div class="child">PieceMaker child</div>
     <div class="child">Rebel</div>
     <div class="child">Favorite Child</div>
-  </div>
+	</div>	
 </body>
 </html>
