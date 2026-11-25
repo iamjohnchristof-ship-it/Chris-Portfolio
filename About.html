@@ -1,186 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About - Chris Soriano</title>
-  
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
-  
-  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
-  <script>
-    $(function() {
-      $("#accordion").accordion({
-        collapsible: true,
-        heightStyle: "auto"
-      });
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRIZ CORP - About Me</title>
 
-  <style>
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    .header-section {
-      text-align: center;
-      margin: 40px 0 20px 0;
-    }
+        body {
+            background: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    .header-section h1 {
-      color: #ffd700;
-      font-size: 3.2rem;
-      letter-spacing: 1.5px;
-      margin-bottom: 5px;
-    }
+        /* Navigation Bar - Matches Gold / Dark Gray / Black Theme */
+        nav {
+            background: gold;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+        }
 
-    .header-section h2 {
-      color: #b0b0b0;
-      font-size: 1.4rem; 
-      font-weight: normal;
-    }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
 
-    
-    #accordion {
-      max-width: 950px;
-      min-height: 380px;
-      margin: 30px auto 70px auto;
-      padding: 0 20px;
-      font-family: 'Segoe UI', sans-serif;
-    }
+        nav a:hover,
+        nav a.active {
+            background: #000000;
+            color: #ffe700;
+            border-bottom: 4px solid #ffe700;
+        }
 
-  
-    .ui-accordion-header {
-      background: #080808;
-      color: #d4af37;
-      border: 1px solid #333333;
-      border-radius: 8px;
-      font-size: 1.25rem; 
-      font-weight: bold;
-      padding: 18px 24px;
-      margin-top: 14px;
-      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-    }
+        /* Header */
+        header {
+            background: #1a1a1a;
+            text-align: center;
+            padding: 35px 20px;
+            border-bottom: 4px solid #ffe700;
+        }
 
-    .ui-accordion-header:hover {
-      background: #1f1f1f;
-      color: #ffd700;
-      border-color: #d4af37;
-    }
+        header h1 {
+            color: #ffe700;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+        }
 
-    .ui-accordion-header.ui-state-active {
-      background: #181818;
-      color: #ffd700;
-      border: 1px solid #d4af37;
-      border-bottom: 3px solid #ffd700;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+        /* Main Layout */
+        .container {
+            display: flex;
+            gap: 30px;
+            max-width: 1400px;
+            width: 100%;
+            margin: 50px auto;
+            padding: 0 30px;
+            align-items: flex-start;
+            flex: 1;
+        }
 
-    .ui-accordion-header .ui-icon {
-      transform: scale(1.4);
-      filter: brightness(0) saturate(100%) invert(76%) sepia(43%) saturate(650%) hue-rotate(6deg) brightness(93%) contrast(90%);
-    }
-    .ui-accordion-content {
-      background-color: #1a1a1a;
-      color: #eaeaea;
-      border: 1px solid #333333;
-      border-top: none;
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-      font-size: 1.15rem; 
-      line-height: 1.8;
-      padding: 24px 28px;
-    }
+        /* Accordion */
+        .about-content {
+            flex: 2;
+        }
 
-    .ui-accordion-content ul, 
-    .ui-accordion-content ol {
-      margin: 0;
-      padding-left: 25px;
-    }
+        .accordion {
+            margin-bottom: 10px;
+        }
 
-    .ui-accordion-content li {
-      margin-bottom: 10px;
-    }
-  </style>
+        .accordion button {
+            width: 100%;
+            padding: 17px 20px;
+            background: #1e1e1e;
+            color: #ffe700;
+            border: 1px solid #3a3518;
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .accordion button:hover {
+            background: #ffe700;
+            color: #000000;
+            border-color: #ffe700;
+        }
+
+        .panel {
+            display: none;
+            padding: 20px 30px;
+            background: #181818;
+            color: #f0f0f0;
+            line-height: 1.6;
+            font-size: 18px;
+            border: 1px solid #2e2e2e;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .panel.show {
+            display: block;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            flex: 1;
+            background: #1e1e1e;
+            padding: 35px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #2e2e2e;
+            border-top: 6px solid #ffe700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+        }
+
+        .profile-card img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #ffe700;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h2 {
+            font-size: 30px;
+            color: #ffe700;
+            margin-bottom: 15px;
+        }
+
+        .profile-card p {
+            font-size: 18px;
+            color: #e5e5e5;
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+
+        .profile-card strong {
+            color: #ffe700;
+        }
+
+        /* Footer - Matches Gold / Dark Gray / Black Theme */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 15px;
+            border-top: 3px solid #ffe700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+
+            .container {
+                flex-direction: column;
+                margin: 30px auto;
+                padding: 0 20px;
+            }
+
+            .about-content,
+            .profile-card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <nav class="navbar" role="navigation" aria-label="Main Navigation">
-    <ul class="nav-list">
-      <li class="nav-item"><a class="nav-link" href="LandingPage.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-      <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation -->
+    <nav>
+        <a href="LandingPage.html">Home</a>
+        <a href="About.html" class="active">About</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
 
-  <div class="header-section">
-    <h1 class="gradientTextHeader">About Me</h1>
-    <h2 class="myFont">Grade 12 - Cooper</h2>
-  </div>
+    <!-- Page Header -->
+    <header>
+        <h1>About Me</h1>
+    </header>
 
-  <div id="accordion">
-    <h3>About Me</h3>
-    <div>
-      <p>I am a Grade 12 ICT student in Section Cooper passionate about Java programming, frontend web development, and clean minimalist design.</p>
-    </div>
-    
-    <h3>Achievements</h3>
-    <div>
-      <ol>
-        <li>failed business</li>
-        <li>Not stopping Trying to be the best version of my self</li>
-        <li>No any addiction Just Motorcycle and making Millions.</li>
-      </ol>
-    </div>
-    
-    <h3>Favorite Artist</h3>
-    <div>
-      <ul>
-        <li>Lany</li>
-        <li>The weekend</li>
-        <li>shawn Mendes</li>
-        <li>Justine Bieber</li>
-        <li>Bruno Mars</li>
-      </ul>
-    </div>
-    
-    <h3>My Favorite Games</h3>
-    <div>
-      <ol>
-        <li>Making Money</li>
-        <li>Achieving Goals</li>
-        <li>Business</li>
-      </ol>
-    </div>
-  </div>
+    <!-- Main Content -->
+    <div class="container">
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-text">
-        <h3>Stay Connected!</h3>
-        <p>
-          "Thank you for visiting my website.
-        </p>
-      </div>
-      <div class="footer-social">
-        <h3>My Socials</h3>
-        <div class="social-links">
-          <a href="https://www.facebook.com/">f</a>
-          <a href="https://www.youtube.com/">▶</a>
-          <a href="https://www.linkedin.com/">in</a>
+        <div class="about-content">
+
+            <div class="accordion">
+                <button onclick="togglePanel(this)">
+                    ▾ Who I Am
+                </button>
+                <div class="panel show">
+                    I am John Christof Soriano (Chris), a Grade 12 ICT Programming student in section 12 - Cooper at Gov. Juanito Reyes Remulla Senior High School. As an aspiring developer, I enjoy building interactive websites and continuously sharpening my programming skills through hands-on projects.
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button onclick="togglePanel(this)">
+                    ▸ Background
+                </button>
+                <div class="panel">
+                    Through the TVL-ICT strand, I have been developing my skills in HTML, CSS, JavaScript, and Java programming. From creating responsive multi-page portfolios and interactive web drills to debugging syntax and building practical tools, I focus on writing clean, functional code.
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button onclick="togglePanel(this)">
+                    ▸ Interests
+                </button>
+                <div class="panel">
+                    Outside of coding, I enjoy wrenching on and customizing my Honda TMX 125 brat cafe racer build, drawing and painting, listening to Japanese rock, and playing games like Monster Hunter, Terraria, Resident Evil, and Call of Duty: Mobile.
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button onclick="togglePanel(this)">
+                    ▸ Personality
+                </button>
+                <div class="panel">
+                    I am a hands-on problem solver who likes figuring out how things work—whether it is troubleshooting code or tuning mechanical parts. I stay curious, welcome new challenges, and always look for ways to level up my craft.
+                </div>
+            </div>
+
         </div>
-      </div>
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+
+            <img src="Images/Formalpic.jpg" alt="My Profile Picture">
+
+            <h2>Hi! I'm Christof.</h2>
+
+            <p>
+                I'm a Grade 12 ICT student who enjoys building clean web
+                projects, coding in Java and JavaScript, and customizing motorcycles.
+            </p>
+
+            <p>
+                <strong>School:</strong><br>
+                Gov. Juanito Reyes Remulla
+                Senior High School
+            </p>
+
+            <p>
+                <strong>Section &amp; Strand:</strong><br>
+                12 - Cooper | TVL - ICT (Computer Programming)
+            </p>
+
+        </div>
+
     </div>
-    <div class="footer-bottom">
-      <p>©2026 CHRIZ CORP</p>
-    </div>
-  </footer>
+
+    <footer>
+        <p>&copy; 2026 CHRIZ CORP | John Christof Soriano</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function togglePanel(button) {
+            const panel = button.nextElementSibling;
+
+            panel.classList.toggle("show");
+
+            if (panel.classList.contains("show")) {
+                button.innerHTML = button.innerHTML.replace("▸", "▾");
+            } else {
+                button.innerHTML = button.innerHTML.replace("▾", "▸");
+            }
+        }
+    </script>
 
 </body>
 </html>
