@@ -1,4 +1,4 @@
-* {
+- {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -233,7 +233,7 @@ h2.myFont {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 35px 20px 25px;
   max-width: 1000px;
   margin: 0 auto;
   width: 100%;
@@ -241,14 +241,14 @@ h2.myFont {
 
 .header-section {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .student-name {
   font-size: 32px;
   font-family: "Georgia", serif;
   color: #ffe700;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .section-code {
@@ -264,14 +264,16 @@ h2.myFont {
   padding: 30px 35px;
   width: 100%;
   max-width: 800px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  text-align: left;
 }
 
 .card-title {
   color: #ffe700;
   font-size: 24px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .card-text {
@@ -279,6 +281,10 @@ h2.myFont {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
 }
 
 .sub-heading {
@@ -294,50 +300,20 @@ h2.myFont {
   font-size: 18px;
 }
 
-.connect-section {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 850px;
-  margin-bottom: 30px;
-  gap: 40px;
-}
-
-.connect-left {
-  flex: 1;
-}
-
-.connect-left h3 {
-  color: #ffe700;
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-.connect-left p {
-  color: #e0e0e0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.connect-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.connect-right h3 {
-  color: #ffe700;
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-@media screen and (max-width: 800px) {
-  .connect-section {
-    flex-direction: column;
-    gap: 25px;
+@media screen and (max-width: 650px) {
+  .student-name {
+    font-size: 26px;
   }
 
-  .connect-right {
-    align-items: flex-start;
+  .section-code {
+    font-size: 18px;
+  }
+
+  .welcome-card {
+    padding: 22px 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
   }
 }
