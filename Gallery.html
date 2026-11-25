@@ -5,29 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Chris Soriano</title>
     <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="LandingPage.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
-                <li class="nav-item"><a class="nav-link active" href="Gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-     <style> 
+    <style> 
         body { 
           font-family: Arial, sans-serif; 
-          background: #312f2f; 
+          background: #121212; 
           margin: 0; 
-          padding: 20px; 
+          padding: 0; 
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
         } 
+
+        main {
+          flex: 1;
+          padding: 20px;
+        }
   
-        h1 { text-align: center; color: #fdfcfc; } 
+        h1 { text-align: center; color: #ffe700; } 
   
         .carousel { 
           width: 90%;
@@ -42,6 +36,7 @@
           overflow: hidden; 
           background: #000; 
           border-radius: 8px; 
+          border: 2px solid #ffe700;
         } 
   
         .slide { 
@@ -60,8 +55,9 @@
           position: absolute; 
           left: 0; right: 0; bottom: 0; 
           padding: 12px 16px; 
-          background: rgba(0, 0, 0, 0.55); 
-          color: #fff; 
+          background: rgba(0, 0, 0, 0.65); 
+          color: #ffe700; 
+          font-weight: bold;
         } 
   
         .nav { 
@@ -76,7 +72,7 @@
           padding: 10px 14px; 
           cursor: pointer; 
         } 
-        .nav:hover { background: rgba(0, 0, 0, 0.8); } 
+        .nav:hover { background: rgba(0, 0, 0, 0.8); color: #ffe700; } 
         .prev { left: 8px; } 
         .next { right: 8px; } 
   
@@ -89,46 +85,54 @@
           padding: 0; 
           border: none; 
           border-radius: 50%; 
-          background: #b8b8b8; 
+          background: #555555; 
           cursor: pointer; 
         } 
-        .dot.active { background: #1F3864; } 
+        .dot.active { background: #ffe700; } 
     </style> 
 </head> 
 <body> 
-  
-    <div class="carousel" id="carousel"> 
-      <div class="slides"> 
-        <figure class="slide"> 
-          <img src="https://rare-gallery.com/uploads/posts/582009-Ducati-Panigale.jpg"> 
-          <figcaption>Ducati Panigale v4</figcaption> 
-        </figure> 
-        <figure class="slide"> 
-          <img src="https://static0.topspeedimages.com/wordpress/wp-content/uploads/jpg/201506/kawasaki-ninja-h2r-t.jpg"> 
-          <figcaption>Kawasaki Ninja h2r</figcaption> 
-        </figure> 
-        <figure class="slide"> 
-          <img src="https://images.carandbike.com/cms/articles/3201985/articles/3202126/A3_OLIG_557_ZB_55_JSGAQ_57_WOC_6_IM_2022_09_09_T11_40_09_162_Z_9f2e1a2e5e.jpg"> 
-          <figcaption>BMW s1000rr</figcaption> 
-        </figure> 
-        <figure class="slide"> 
-          <img src="https://www.gearpatrol.com/wp-content/uploads/sites/2/2025/11/CFMoto-V4-SR-RR-8.jpg.webp?w=1920" alt="Describe image 4"> 
-          <figcaption>CFMOTO V4SR-RR</figcaption> 
-        </figure> 
-  
-        <button class="nav prev" type="button" aria-label="Previous 
-slide">&#10094;</button> 
-       <button class="nav next" type="button" aria-label="Next slide">&#10095;</button> 
-      </div> 
-  
-      <div class="dots"></div> 
-    </div> 
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="LandingPage.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="Gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="carousel" id="carousel"> 
+          <div class="slides"> 
+            <figure class="slide"> 
+              <img src="https://rare-gallery.com/uploads/posts/582009-Ducati-Panigale.jpg"> 
+              <figcaption>Ducati Panigale v4</figcaption> 
+            </figure> 
+            <figure class="slide"> 
+              <img src="https://static0.topspeedimages.com/wordpress/wp-content/uploads/jpg/201506/kawasaki-ninja-h2r-t.jpg"> 
+              <figcaption>Kawasaki Ninja h2r</figcaption> 
+            </figure> 
+            <figure class="slide"> 
+              <img src="https://images.carandbike.com/cms/articles/3201985/articles/3202126/A3_OLIG_557_ZB_55_JSGAQ_57_WOC_6_IM_2022_09_09_T11_40_09_162_Z_9f2e1a2e5e.jpg"> 
+              <figcaption>BMW s1000rr</figcaption> 
+            </figure> 
+            <figure class="slide"> 
+              <img src="https://www.gearpatrol.com/wp-content/uploads/sites/2/2025/11/CFMoto-V4-SR-RR-8.jpg.webp?w=1920" alt="Describe image 4"> 
+              <figcaption>CFMOTO V4SR-RR</figcaption> 
+            </figure> 
+      
+            <button class="nav prev" type="button" aria-label="Previous slide">&#10094;</button> 
+            <button class="nav next" type="button" aria-label="Next slide">&#10095;</button> 
+          </div> 
+      
+          <div class="dots"></div> 
+        </div> 
+    </main>
   
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
     <script> 
     $(document).ready(function () { 
-  
-    
       const $carousel = $("#carousel"); 
       const $slides   = $carousel.find(".slide"); 
       const $dotsBox  = $carousel.find(".dots"); 
@@ -138,9 +142,7 @@ slide">&#10094;</button>
       let current     = 0;      
       let timer       = null;   
   
-  
       $slides.hide().eq(0).show(); 
-  
 
       $slides.each(function (i) { 
         $("<button>") 
@@ -188,11 +190,10 @@ slide">&#10094;</button>
           prevSlide(); 
         } 
       }); 
-  
     }); 
     </script> 
 
-      <footer class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-text">
                 <h3>Stay Connected!</h3>
@@ -213,6 +214,7 @@ slide">&#10094;</button>
 
         <div class="footer-bottom">
             <p>©2026 CHRIZ CORP</p>
+        </div>
     </footer>
 
 </body>
