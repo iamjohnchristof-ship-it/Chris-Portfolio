@@ -7,49 +7,59 @@
     <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
 
     <style>
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         /* Header */
         header {
+            width: 100%;
             background: #1a1a1a;
             text-align: center;
-            padding: 35px 20px;
+            padding: 25px 20px;
             border-bottom: 4px solid #ffe700;
         }
 
         header h1 {
             color: #ffe700;
-            font-size: 32px;
+            font-size: 30px;
             letter-spacing: 0.5px;
+            margin: 0;
         }
 
-        /* Main Layout */
+        /* Main Layout - Maximized Full Width, No Horizontal Overflow */
         .container {
             display: flex;
-            gap: 30px;
-            max-width: 1400px;
+            gap: 24px;
             width: 100%;
-            margin: 50px auto;
-            padding: 0 30px;
+            max-width: 100%;
+            margin: 0;
+            padding: 30px 4%;
             align-items: flex-start;
             flex: 1;
+            box-sizing: border-box;
         }
 
         /* Accordion */
         .about-content {
             flex: 2;
+            min-width: 0;
         }
 
         .accordion {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .accordion button {
             width: 100%;
-            padding: 17px 20px;
+            padding: 15px 18px;
             background: #1e1e1e;
             color: #ffe700;
             border: 1px solid #3a3518;
             text-align: left;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             border-radius: 8px;
@@ -64,14 +74,15 @@
 
         .panel {
             display: none;
-            padding: 20px 30px;
+            padding: 18px 22px;
             background: #181818;
             color: #f0f0f0;
             line-height: 1.6;
-            font-size: 18px;
+            font-size: 16px;
             border: 1px solid #2e2e2e;
             border-top: none;
             border-radius: 0 0 8px 8px;
+            word-wrap: break-word;
         }
 
         .panel.show {
@@ -81,8 +92,9 @@
         /* Profile Card */
         .profile-card {
             flex: 1;
+            min-width: 0;
             background: #1e1e1e;
-            padding: 35px;
+            padding: 28px 24px;
             text-align: center;
             border-radius: 12px;
             border: 1px solid #2e2e2e;
@@ -91,24 +103,24 @@
         }
 
         .profile-card img {
-            width: 220px;
-            height: 220px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 50%;
             border: 4px solid #ffe700;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .profile-card h2 {
-            font-size: 30px;
+            font-size: 26px;
             color: #ffe700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .profile-card p {
-            font-size: 18px;
+            font-size: 16px;
             color: #e5e5e5;
-            margin: 12px 0;
+            margin: 10px 0;
             line-height: 1.5;
         }
 
@@ -120,13 +132,17 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                margin: 30px auto;
-                padding: 0 20px;
+                padding: 20px 16px;
             }
 
             .about-content,
             .profile-card {
                 width: 100%;
+            }
+
+            .profile-card img {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
