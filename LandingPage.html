@@ -55,6 +55,18 @@
             color: #000000;
         }
 
+        .cursor {
+            display: inline-block;
+            color: #ffe700;
+            font-weight: bold;
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
         @media (max-width: 768px) {
             .flex-row {
                 flex-direction: column;
@@ -82,17 +94,12 @@
         <div class="flex-row">
             <section class="welcome-card">
                 <h2 class="card-title">Welcome to My Personal Website!</h2>
-                <p class="card-text">
-                    Hello! I'm CHRISTOF SORIANO, a TVL-ICT student at Gov. Juanito Reyes Remulla Senior High School.
-                    This personal website showcases the projects, activities, and skills I have built throughout this semester.
-                </p>
+                <p class="card-text" id="typed-intro"></p>
 
                 <div class="sub-heading">
                     <h3>About this Website</h3>
                 </div>
-                <p class="card-text">
-                    Built using HTML, CSS, and JavaScript, this portfolio highlights my coding exercises and web design projects. Feel free to explore and check out my work!
-                </p>
+                <p class="card-text" id="typed-about"></p>
             </section>
 
             <div class="flex-buttons">
@@ -127,5 +134,37 @@
             <p>©2026 CHRIZ CORP</p>
         </div>
     </footer>
+
+    <script>
+        const introText = "Hello! I'm CHRISTOF SORIANO, a TVL-ICT student at Gov. Juanito Reyes Remulla Senior High School. This personal website showcases the projects, activities, and skills I have built throughout this semester.";
+        const aboutText = "Built using HTML, CSS, and JavaScript, this portfolio highlights my coding exercises and web design projects. Feel free to explore and check out my work!";
+
+        const introEl = document.getElementById("typed-intro");
+        const aboutEl = document.getElementById("typed-about");
+        const cursor = document.createElement("span");
+        cursor.className = "cursor";
+        cursor.textContent = "|";
+
+        function typeText(element, text, speed, done) {
+            let i = 0;
+            element.textContent = "";
+            element.appendChild(cursor);
+
+            function step() {
+                if (i < text.length) {
+                    cursor.insertAdjacentText("beforebegin", text.charAt(i));
+                    i++;
+                    setTimeout(step, speed);
+                } else if (done) {
+                    done();
+                }
+            }
+            step();
+        }
+
+        typeText(introEl, introText, 22, () => {
+            typeText(aboutEl, aboutText, 22);
+        });
+    </script>
 </body>
 </html>
