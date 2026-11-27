@@ -4,200 +4,231 @@
   box-sizing: border-box;
 }
 
-html, body {
-  background-color: #121212;
-  background-image: url("Backgroundguns.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
+body {
   min-height: 100vh;
-  height: 100%;                
-  margin: 0;
   display: flex;
-  flex-direction: column;      
-  overflow-y: auto;                  
-  -webkit-overflow-scrolling: touch;
+  flex-direction: column;
+  background-color: #121212;
+  background-image: url("backgroundguns.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-main, .main-content, .container, section {
-  flex: 1;
-}
-
+/* Navigation Bar */
 .navbar {
-  background-color: gold; 
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #ffe700;
+  padding: 12px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .nav-list {
+  list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .nav-link {
-  display: block;
-  padding: 14px 20px;
-  color: #000000; 
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.nav-linka {
-  display: block;
-  padding: 14px 20px;
-  color: #000000; 
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.nav-link:link {
   color: #000000;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-linka:link {
-  color: #000000;
-}
-
-.nav-link:visited {
-  color: #333333;
-}
-
-.nav-linka:visited {
-  color: #333333;
-}
-
-.nav-link:hover {
-  background-color: #000000;
-  color: gold;
-}
-
-.nav-linka:hover {
-  background-color: #000000;
-  color: gold;
-}
-
-.nav-link:focus {
-  outline: 3px solid #000000;
-  outline-offset: -3px;
-  background-color: #000000;
-  color: gold;
-}
-
-.nav-linka:focus {
-  outline: 3px solid #000000;
-  outline-offset: -3px;
-  background-color: #000000;
-  color: gold;
-}
-
-.nav-link:active {
-  background-color: #000000;
-  transform: translateY(1px);
-}
-
-.nav-linka:active {
-  background-color: #000000;
-  transform: translateY(1px);
-}
-
+.nav-link:hover,
 .nav-link.active {
-  background-color: #000000;
-  border-bottom: 4px solid gold;
-  color: gold;
+  background-color: #121212;
+  color: #ffe700;
 }
 
-.nav-linka.active {
-  background-color: #000000;
-  border-bottom: 4px solid gold;
-  color: gold;
+/* Main Container */
+.main-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.myFont {
-  font-family: Arial, sans-serif;
-  color: gold;
+.header-section {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-h1.myFont {
-  font-size: 42px;
-  margin-top: 20px;
+.student-name {
+  color: #ffe700;
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
 }
 
-h2.myFont {
-  font-size: 24px;
-  color: #ffffff;
+.section-code {
+  color: #e5e5e5;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.gradientTextHeader {
-  background-image: linear-gradient(90deg, gold, #ffe066);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 0.5px #000000;
-  color: transparent;
-  display: inline-block; 
-  font-family: Arial, sans-serif;
-  font-size: 50px;
-  font-weight: bold;
+/* Landing Page Row: Description Left, 4 Stacked Buttons Right */
+.landing-row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 950px;
+  margin-bottom: 35px;
 }
 
-.footer {
-  background-color: rgba(59, 51, 52, 0.72) !important;
+.welcome-card {
+  flex: 2;
+  margin-bottom: 0;
+  background-color: rgba(30, 30, 30, 0.72);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  color: black;
-  font-family: "Segoe UI", sans-serif;
+  border: 2px solid #ffe700;
+  border-radius: 12px;
+  padding: 30px 35px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  text-align: left;
+  animation: slideLeft 0.7s ease forwards;
+}
+
+.card-title {
+  color: #ffe700;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.sub-heading h3 {
+  color: #ffe700;
+  font-size: 19px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  color: #f0f0f0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.right-buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.page-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  background-color: rgba(26, 26, 26, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffe700;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: 1px solid #ffe700;
+  border-radius: 8px;
+  opacity: 0;
+  animation: dropDown 0.6s ease forwards;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.page-btn:nth-child(1) { animation-delay: 0.1s; }
+.page-btn:nth-child(2) { animation-delay: 0.2s; }
+.page-btn:nth-child(3) { animation-delay: 0.3s; }
+.page-btn:nth-child(4) { animation-delay: 0.4s; }
+
+.page-btn:hover {
+  background-color: #ffe700;
+  color: #000000;
+}
+
+/* Simple Entrance Animations */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dropDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(59, 51, 52, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffffff;
   width: 100%;
-  position: relative;
-  margin-top: auto;            
+  margin-top: auto;
 }
 
 .footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 20px;
   display: flex;
-  justify-content: space-around;
-  padding: 15px 8%;
-  height: 110px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer-text {
-  width: 50%;
-}
-
-.footer-text p {
-  margin: 10px 15px;
-  font-size: 12px;
-}
-
-.footer-social {
-  text-align: center;
+.footer-text h3,
+.footer-social h3 {
+  color: #ffe700;
+  margin-bottom: 6px;
 }
 
 .social-links {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 15px;
+  gap: 10px;
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #1e1e1e;
   color: #ffe700;
-  font-size: 25px;
   text-decoration: none;
+  border-radius: 6px;
   font-weight: bold;
 }
 
 .social-links a:hover {
-  color: white;
+  background-color: #ffe700;
+  color: #000000;
 }
 
 .footer-bottom {
@@ -206,69 +237,15 @@ h2.myFont {
   text-align: center;
   padding: 10px;
   font-size: 12px;
+  font-weight: 600;
 }
 
-@media (max-width: 650px) {
-  .nav-list {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .nav-link {
-    padding: 10px 14px;
-    font-size: 14px;
+@media (max-width: 768px) {
+  .landing-row {
+    flex-direction: column;
   }
 
-  .nav-linka {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
-
-  .gradientTextHeader {
-    font-size: 36px;
-  }
-
-  h1.myFont {
-    font-size: 32px;
+  .welcome-card {
+    padding: 22px;
   }
 }
-
-/* --- Copied Home Layout Styles (Gold / Dark Gray / Black Theme) --- */
-.main-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 35px 20px 25px;
-  max-width: 1000px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.header-section {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.student-name {
-  font-size: 32px;
-  font-family: "Georgia", serif;
-  color: #ffe700;
-  margin-bottom: 8px;
-}
-
-.section-code {
-  font-size: 20px;
-  font-family: "Georgia", serif;
-  color: #ffffff;
-}
-
-.welcome-card {
-  background-color: #1e1e1e;
-  border: 2px solid #ffe700;
-  border-radius: 12px;
-  padding: 30px 35px;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 35px;
-  box-shadow: 0 4px 10px rgba(0,
