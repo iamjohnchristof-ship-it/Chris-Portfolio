@@ -155,7 +155,7 @@ h2.myFont {
   background-color: rgba(59, 51, 52, 0.72) !important;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  color: #ffffff;
+  color: black;
   font-family: "Segoe UI", sans-serif;
   width: 100%;
   position: relative;
