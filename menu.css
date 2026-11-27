@@ -4,21 +4,23 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  min-height: 100%;
+}
+
+body {
   background-color: #121212;
-  background-image: url("Backgroundguns.jpg");
+  background-image: url("backgroundguns.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: #ffffff;
   font-family: Arial, sans-serif;
   min-height: 100vh;
-  height: 100%;                
   margin: 0;
   display: flex;
-  flex-direction: column;      
-  overflow-y: auto;                  
+  flex-direction: column;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -45,15 +47,7 @@ main, .main-content, .container, section {
   padding: 0 10px;
 }
 
-.nav-link {
-  display: block;
-  padding: 14px 20px;
-  color: #000000; 
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-}
-
+.nav-link,
 .nav-linka {
   display: block;
   padding: 14px 20px;
@@ -63,39 +57,23 @@ main, .main-content, .container, section {
   font-weight: 600;
 }
 
-.nav-link:link {
-  color: #000000;
-}
-
+.nav-link:link,
 .nav-linka:link {
   color: #000000;
 }
 
-.nav-link:visited {
-  color: #333333;
-}
-
+.nav-link:visited,
 .nav-linka:visited {
   color: #333333;
 }
 
-.nav-link:hover {
-  background-color: #000000;
-  color: gold;
-}
-
+.nav-link:hover,
 .nav-linka:hover {
   background-color: #000000;
   color: gold;
 }
 
-.nav-link:focus {
-  outline: 3px solid #000000;
-  outline-offset: -3px;
-  background-color: #000000;
-  color: gold;
-}
-
+.nav-link:focus,
 .nav-linka:focus {
   outline: 3px solid #000000;
   outline-offset: -3px;
@@ -103,22 +81,13 @@ main, .main-content, .container, section {
   color: gold;
 }
 
-.nav-link:active {
-  background-color: #000000;
-  transform: translateY(1px);
-}
-
+.nav-link:active,
 .nav-linka:active {
   background-color: #000000;
   transform: translateY(1px);
 }
 
-.nav-link.active {
-  background-color: #000000;
-  border-bottom: 4px solid gold;
-  color: gold;
-}
-
+.nav-link.active,
 .nav-linka.active {
   background-color: #000000;
   border-bottom: 4px solid gold;
@@ -165,7 +134,7 @@ h2.myFont {
   display: flex;
   justify-content: space-around;
   padding: 15px 8%;
-  height: 110px;
+  min-height: 110px;
 }
 
 .footer-text {
@@ -213,11 +182,7 @@ h2.myFont {
     justify-content: center;
   }
   
-  .nav-link {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
-
+  .nav-link,
   .nav-linka {
     padding: 10px 14px;
     font-size: 14px;
@@ -232,7 +197,7 @@ h2.myFont {
   }
 }
 
-/* --- Copied Home Layout Styles (Gold / Dark Gray / Black Theme) --- */
+/* --- Home / Layout Styles (Gold / Dark Gray / Black Theme) --- */
 .main-container {
   flex: 1;
   display: flex;
@@ -263,7 +228,7 @@ h2.myFont {
 }
 
 .welcome-card {
-  background-color: #1e1e1e;
+  background-color: rgba(30, 30, 30, 0.9);
   border: 2px solid #ffe700;
   border-radius: 12px;
   padding: 30px 35px;
