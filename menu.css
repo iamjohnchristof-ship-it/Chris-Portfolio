@@ -152,7 +152,9 @@ h2.myFont {
 }
 
 .footer {
-  background-color: #3b3334;
+  background-color: rgba(59, 51, 52, 0.72) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: #ffffff;
   font-family: "Segoe UI", sans-serif;
   width: 100%;
