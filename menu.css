@@ -6,10 +6,6 @@
 
 html, body {
   background-color: #121212;
-  background-image: url("Backgroundguns.jpg"); !important;
-  background-size: cover; !important;
-  background-position: center; !important;
-  background-repeat: no-repeat; !important;
   color: #ffffff;
   font-family: Arial, sans-serif;
   min-height: 100vh;
