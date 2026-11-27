@@ -15,21 +15,21 @@
 }
 
 .box {
-  background-color: rgba(26, 26, 26, 0.72);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 215, 0, 0.4);
-  border-radius: 8px;
-  padding: 22px 20px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgba(26, 26, 26, 0.72) !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 8px;
+    padding: 22px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .box:hover {
-  background-color: rgba(26, 26, 26, 0.9);
-  transform: translateY(-4px);
-  border-color: gold;
+    background-color: rgba(26, 26, 26, 0.9) !important;
+    transform: translateY(-4px);
+    border-color: gold;
 }
 
 .box a {
