@@ -22,6 +22,8 @@
             text-align: center;
             padding: 25px 20px;
             border-bottom: 4px solid #ffe700;
+            opacity: 0;
+            animation: fadeDown 0.5s ease forwards;
         }
 
         header h1 {
@@ -52,7 +54,14 @@
 
         .accordion {
             margin-bottom: 12px;
+            opacity: 0;
+            animation: slideUp 0.5s ease forwards;
         }
+
+        .accordion:nth-child(1) { animation-delay: 0.1s; }
+        .accordion:nth-child(2) { animation-delay: 0.2s; }
+        .accordion:nth-child(3) { animation-delay: 0.3s; }
+        .accordion:nth-child(4) { animation-delay: 0.4s; }
 
         .accordion button {
             width: 100%;
@@ -93,6 +102,7 @@
 
         .panel.show {
             display: block;
+            animation: panelOpen 0.25s ease forwards;
         }
 
         /* Profile Card */
@@ -108,6 +118,9 @@
             border: 1px solid #2e2e2e;
             border-top: 6px solid #ffe700;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+            opacity: 0;
+            animation: slideRight 0.6s ease forwards;
+            animation-delay: 0.25s;
         }
 
         .profile-card img {
@@ -134,6 +147,51 @@
 
         .profile-card strong {
             color: #ffe700;
+        }
+
+        /* Simple Animations */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes panelOpen {
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Design */
