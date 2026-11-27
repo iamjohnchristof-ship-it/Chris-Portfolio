@@ -5,6 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERSONAL WEBSITE</title>
     <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
+
+    <style>
+        .landing-row {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+            max-width: 950px;
+            margin-bottom: 35px;
+        }
+
+        .landing-row .welcome-card {
+            flex: 2;
+            margin-bottom: 0;
+            background-color: rgba(30, 30, 30, 0.72);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            animation: slideLeft 0.7s ease forwards;
+        }
+
+        .right-buttons {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .page-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 18px;
+            background-color: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: #ffe700;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #ffe700;
+            border-radius: 8px;
+            opacity: 0;
+            animation: dropDown 0.6s ease forwards;
+        }
+
+        .page-btn:nth-child(1) { animation-delay: 0.1s; }
+        .page-btn:nth-child(2) { animation-delay: 0.2s; }
+        .page-btn:nth-child(3) { animation-delay: 0.3s; }
+        .page-btn:nth-child(4) { animation-delay: 0.4s; }
+
+        .page-btn:hover {
+            background-color: #ffe700;
+            color: #000000;
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes dropDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .landing-row {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
