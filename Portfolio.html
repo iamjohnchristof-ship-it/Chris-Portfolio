@@ -6,6 +6,49 @@
     <title>Portfolio - Chris Soriano</title>
     <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
     <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/gridStyle.css">
+
+    <style>
+        .container .box {
+            background-color: rgba(30, 30, 30, 0.72);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            opacity: 0;
+            animation: showOneByOne 0.45s ease forwards;
+        }
+
+        .container .box:nth-child(1) { animation-delay: 0.05s; }
+        .container .box:nth-child(2) { animation-delay: 0.10s; }
+        .container .box:nth-child(3) { animation-delay: 0.15s; }
+        .container .box:nth-child(4) { animation-delay: 0.20s; }
+        .container .box:nth-child(5) { animation-delay: 0.25s; }
+        .container .box:nth-child(6) { animation-delay: 0.30s; }
+        .container .box:nth-child(7) { animation-delay: 0.35s; }
+        .container .box:nth-child(8) { animation-delay: 0.40s; }
+        .container .box:nth-child(9) { animation-delay: 0.45s; }
+        .container .box:nth-child(10) { animation-delay: 0.50s; }
+        .container .box:nth-child(11) { animation-delay: 0.55s; }
+        .container .box:nth-child(12) { animation-delay: 0.60s; }
+        .container .box:nth-child(13) { animation-delay: 0.65s; }
+        .container .box:nth-child(14) { animation-delay: 0.70s; }
+        .container .box:nth-child(15) { animation-delay: 0.75s; }
+        .container .box:nth-child(16) { animation-delay: 0.80s; }
+        .container .box:nth-child(17) { animation-delay: 0.85s; }
+        .container .box:nth-child(18) { animation-delay: 0.90s; }
+        .container .box:nth-child(19) { animation-delay: 0.95s; }
+        .container .box:nth-child(20) { animation-delay: 1.00s; }
+        .container .box:nth-child(21) { animation-delay: 1.05s; }
+
+        @keyframes showOneByOne {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -46,8 +89,8 @@
         <div class="box"><a href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/console.html">Console Sample</a></div>
         <div class="box"><a href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/Samplecalcu.html">Sample calculator</a></div>
     </main>
-    </main>
-      <footer class="footer">
+
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-text">
                 <h3>Stay Connected!</h3>
@@ -68,6 +111,7 @@
 
         <div class="footer-bottom">
             <p>©2026 CHRIZ CORP</p>
+        </div>
     </footer>
 </body>
 </html>
