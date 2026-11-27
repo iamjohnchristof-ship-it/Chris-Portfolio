@@ -14,11 +14,12 @@
         }
 
         body {
-            background: #121212;
-            background-image: url("Backgroundguns.jpg") !important;
-            background-size: cover !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
+            background-color: #121212;
+            background-image: url("Backgroundguns.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -34,7 +35,6 @@
             justify-content: flex-start;
             align-items: center;
             padding: 0 10px;
-            gap: 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
         }
 
@@ -60,7 +60,7 @@
             border-bottom: 4px solid #ffe700;
         }
 
-        /* Page Header - Matches Gold / Dark Gray / Black Theme */
+        /* Page Header */
         header {
             display: flex;
             flex-direction: column;
@@ -72,8 +72,7 @@
             text-align: center;
             padding: 35px 20px;
             border-bottom: 4px solid #ffe700;
-            opacity: 0;
-            animation: fadeDown 0.5s ease forwards;
+            animation: fadeDown 0.5s ease;
         }
 
         header h1 {
@@ -94,7 +93,7 @@
             justify-content: center;
         }
 
-        /* Contact Card */
+        /* Glass Contact Card */
         .contact-card {
             width: 100%;
             display: flex;
@@ -110,9 +109,7 @@
             border: 1px solid rgba(255, 231, 0, 0.35);
             border-top: 6px solid #ffe700;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
-            opacity: 0;
-            animation: cardRise 0.6s ease forwards;
-            animation-delay: 0.15s;
+            animation: cardRise 0.6s ease;
         }
 
         .contact-card h2 {
@@ -134,7 +131,7 @@
             padding: 16px;
             background: rgba(18, 18, 18, 0.65);
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             font-size: 16px;
             color: #f0f0f0;
         }
@@ -175,4 +172,122 @@
             font-size: 17px;
             font-weight: bold;
             border-radius: 8px;
-            border:
+            border: 1px solid #ffe700;
+            animation: btnPop 0.5s ease;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+
+        .social-btn:hover {
+            background: rgba(0, 0, 0, 0.85);
+            color: #ffe700;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(26, 26, 26, 0.78);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: #ffffff;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 15px;
+            border-top: 3px solid #ffe700;
+        }
+
+        /* Animations */
+        @keyframes fadeDown {
+            from {
+                transform: translateY(-15px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardRise {
+            from {
+                transform: translateY(20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes btnPop {
+            from {
+                transform: translateY(12px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0 6px;
+            }
+
+            nav a {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+
+            .container {
+                margin: 30px auto;
+                padding: 0 20px;
+            }
+
+            .contact-card {
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="LandingPage.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="Contact.html" class="active">Contact</a>
+    </nav>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="contact-card">
+            <h2>Get in Touch</h2>
+            <p>Got a project idea, collaboration, or question? Reach out anytime.</p>
+
+            <div class="contact-info">
+                <div class="info-row"><strong>Phone:</strong> <span>09292864530</span></div>
+                <div class="info-row"><strong>Address:</strong> <span>N/A</span></div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/johnchristof.soriano.77" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
+                <a href="https://www.instagram.com/_jinx.csrno/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CHRIZ CORP | John Christof Soriano</p>
+    </footer>
+
+</body>
+</html>
