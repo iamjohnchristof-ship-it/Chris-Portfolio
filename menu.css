@@ -4,23 +4,16 @@
   box-sizing: border-box;
 }
 
-html {
-  min-height: 100%;
-}
-
-body {
+html, body {
   background-color: #121212;
-  background-image: url("backgroundguns.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: #ffffff;
   font-family: Arial, sans-serif;
   min-height: 100vh;
+  height: 100%;                
   margin: 0;
   display: flex;
-  flex-direction: column;
-  overflow-y: auto;
+  flex-direction: column;      
+  overflow-y: auto;                  
   -webkit-overflow-scrolling: touch;
 }
 
@@ -47,7 +40,15 @@ main, .main-content, .container, section {
   padding: 0 10px;
 }
 
-.nav-link,
+.nav-link {
+  display: block;
+  padding: 14px 20px;
+  color: #000000; 
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 .nav-linka {
   display: block;
   padding: 14px 20px;
@@ -57,23 +58,39 @@ main, .main-content, .container, section {
   font-weight: 600;
 }
 
-.nav-link:link,
+.nav-link:link {
+  color: #000000;
+}
+
 .nav-linka:link {
   color: #000000;
 }
 
-.nav-link:visited,
+.nav-link:visited {
+  color: #333333;
+}
+
 .nav-linka:visited {
   color: #333333;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  background-color: #000000;
+  color: gold;
+}
+
 .nav-linka:hover {
   background-color: #000000;
   color: gold;
 }
 
-.nav-link:focus,
+.nav-link:focus {
+  outline: 3px solid #000000;
+  outline-offset: -3px;
+  background-color: #000000;
+  color: gold;
+}
+
 .nav-linka:focus {
   outline: 3px solid #000000;
   outline-offset: -3px;
@@ -81,13 +98,22 @@ main, .main-content, .container, section {
   color: gold;
 }
 
-.nav-link:active,
+.nav-link:active {
+  background-color: #000000;
+  transform: translateY(1px);
+}
+
 .nav-linka:active {
   background-color: #000000;
   transform: translateY(1px);
 }
 
-.nav-link.active,
+.nav-link.active {
+  background-color: #000000;
+  border-bottom: 4px solid gold;
+  color: gold;
+}
+
 .nav-linka.active {
   background-color: #000000;
   border-bottom: 4px solid gold;
@@ -134,7 +160,7 @@ h2.myFont {
   display: flex;
   justify-content: space-around;
   padding: 15px 8%;
-  min-height: 110px;
+  height: 110px;
 }
 
 .footer-text {
@@ -182,7 +208,11 @@ h2.myFont {
     justify-content: center;
   }
   
-  .nav-link,
+  .nav-link {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
   .nav-linka {
     padding: 10px 14px;
     font-size: 14px;
@@ -197,7 +227,7 @@ h2.myFont {
   }
 }
 
-/* --- Home / Layout Styles (Gold / Dark Gray / Black Theme) --- */
+/* --- Copied Home Layout Styles (Gold / Dark Gray / Black Theme) --- */
 .main-container {
   flex: 1;
   display: flex;
@@ -228,62 +258,11 @@ h2.myFont {
 }
 
 .welcome-card {
-  background-color: rgba(30, 30, 30, 0.9);
+  background-color: #1e1e1e;
   border: 2px solid #ffe700;
   border-radius: 12px;
   padding: 30px 35px;
   width: 100%;
   max-width: 800px;
   margin-bottom: 35px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-  text-align: left;
-}
-
-.card-title {
-  color: #ffe700;
-  font-size: 24px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.card-text {
-  color: #f0f0f0;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.card-text:last-child {
-  margin-bottom: 0;
-}
-
-.sub-heading {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 15px;
-  margin-bottom: 12px;
-}
-
-.sub-heading h3 {
-  color: #ffe700;
-  font-size: 18px;
-}
-
-@media screen and (max-width: 650px) {
-  .student-name {
-    font-size: 26px;
-  }
-
-  .section-code {
-    font-size: 18px;
-  }
-
-  .welcome-card {
-    padding: 22px 20px;
-  }
-
-  .card-title {
-    font-size: 20px;
-  }
-}
+  box-shadow: 0 4px 10px rgba(0,
