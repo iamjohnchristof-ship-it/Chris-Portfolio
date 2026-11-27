@@ -39,7 +39,8 @@
         }
 
         nav a {
-            display: block;
+            display: flex;
+            align-items: center;
             color: #000000;
             text-decoration: none;
             padding: 14px 20px;
@@ -61,6 +62,10 @@
 
         /* Page Header - Matches Gold / Dark Gray / Black Theme */
         header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background: rgba(26, 26, 26, 0.75);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
@@ -92,6 +97,10 @@
         /* Contact Card */
         .contact-card {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
             background: rgba(30, 30, 30, 0.72);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
@@ -109,21 +118,19 @@
         .contact-card h2 {
             font-size: 28px;
             color: #ffe700;
-            margin-bottom: 12px;
         }
 
         .contact-card > p {
             font-size: 16px;
             color: #e5e5e5;
             line-height: 1.6;
-            margin-bottom: 24px;
         }
 
         .contact-info {
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            margin-bottom: 28px;
             padding: 16px;
             background: rgba(18, 18, 18, 0.65);
             border-radius: 8px;
@@ -132,20 +139,34 @@
             color: #f0f0f0;
         }
 
-        .contact-info strong {
+        .info-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .info-row strong {
             color: #ffe700;
         }
 
         /* Social Links */
         .social-links {
+            width: 100%;
             display: flex;
+            flex-direction: row;
             justify-content: center;
+            align-items: center;
             gap: 18px;
             flex-wrap: wrap;
+            margin-top: 6px;
         }
 
         .social-btn {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             min-width: 170px;
             padding: 13px 24px;
             background: #ffe700;
@@ -154,129 +175,4 @@
             font-size: 17px;
             font-weight: bold;
             border-radius: 8px;
-            border: 1px solid #ffe700;
-            opacity: 0;
-            animation: btnPop 0.45s ease forwards;
-            transition: background 0.2s, color 0.2s, transform 0.2s;
-        }
-
-        .social-btn:nth-child(1) { animation-delay: 0.3s; }
-        .social-btn:nth-child(2) { animation-delay: 0.45s; }
-
-        .social-btn:hover {
-            background: rgba(0, 0, 0, 0.85);
-            color: #ffe700;
-            transform: translateY(-2px);
-        }
-
-        /* Footer - Matches Gold / Dark Gray / Black Theme */
-        footer {
-            background-color: rgba(26, 26, 26, 0.78);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            color: #ffffff;
-            text-align: center;
-            padding: 16px 20px;
-            font-size: 15px;
-            border-top: 3px solid #ffe700;
-        }
-
-        /* Simple Animations */
-        @keyframes fadeDown {
-            from {
-                opacity: 0;
-                transform: translateY(-15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes cardRise {
-            from {
-                opacity: 0;
-                transform: translateY(22px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes btnPop {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 0 6px;
-            }
-
-            nav a {
-                padding: 10px 14px;
-                font-size: 14px;
-            }
-
-            .container {
-                margin: 30px auto;
-                padding: 0 20px;
-            }
-
-            .contact-card {
-                padding: 35px 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="LandingPage.html">Home</a>
-        <a href="About.html">About</a>
-        <a href="Gallery.html">Gallery</a>
-        <a href="Portfolio.html">Portfolio</a>
-        <a href="Contact.html" class="active">Contact</a>
-    </nav>
-
-    <!-- Page Header -->
-    <header>
-        <h1>Contact</h1>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container">
-        <div class="contact-card">
-            <h2>Get in Touch</h2>
-            <p>Got a project idea, collaboration, or question? Reach out anytime.</p>
-
-            <div class="contact-info">
-                <p><strong>Phone:</strong> 09292864530</p>
-                <p><strong>Address:</strong> N/A</p>
-            </div>
-
-            <div class="social-links">
-                <a href="https://www.facebook.com/johnchristof.soriano.77" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
-                <a href="https://www.instagram.com/_jinx.csrno/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 CHRIZ CORP | John Christof Soriano</p>
-    </footer>
-
-</body>
-</html>
+            border:
