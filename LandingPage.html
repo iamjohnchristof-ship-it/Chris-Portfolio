@@ -7,31 +7,34 @@
     <link rel="stylesheet" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/menu.css">
 
     <style>
-        .landing-row {
+        .flex-row {
             display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
             gap: 24px;
             width: 100%;
             max-width: 950px;
             margin-bottom: 35px;
         }
 
-        .landing-row .welcome-card {
+        .flex-row .welcome-card {
             flex: 2;
             margin-bottom: 0;
             background-color: rgba(30, 30, 30, 0.72);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
-            animation: slideLeft 0.7s ease forwards;
         }
 
-        .right-buttons {
+        .flex-buttons {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            justify-content: space-between;
+            gap: 12px;
         }
 
-        .page-btn {
+        .flex-btn {
             flex: 1;
             display: flex;
             align-items: center;
@@ -45,44 +48,15 @@
             font-weight: bold;
             border: 1px solid #ffe700;
             border-radius: 8px;
-            opacity: 0;
-            animation: dropDown 0.6s ease forwards;
         }
 
-        .page-btn:nth-child(1) { animation-delay: 0.1s; }
-        .page-btn:nth-child(2) { animation-delay: 0.2s; }
-        .page-btn:nth-child(3) { animation-delay: 0.3s; }
-        .page-btn:nth-child(4) { animation-delay: 0.4s; }
-
-        .page-btn:hover {
+        .flex-btn:hover {
             background-color: #ffe700;
             color: #000000;
         }
 
-        @keyframes slideLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes dropDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @media (max-width: 768px) {
-            .landing-row {
+            .flex-row {
                 flex-direction: column;
             }
         }
@@ -105,7 +79,7 @@
             <h2 class="section-code">Grade 12 - Cooper</h2>
         </header>
 
-        <div class="landing-row">
+        <div class="flex-row">
             <section class="welcome-card">
                 <h2 class="card-title">Welcome to My Personal Website!</h2>
                 <p class="card-text">
@@ -121,11 +95,11 @@
                 </p>
             </section>
 
-            <div class="right-buttons">
-                <a class="page-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/About.html">ABOUT</a>
-                <a class="page-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/Gallery.html">GALLERY</a>
-                <a class="page-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/Portfolio.html">PORTFOLIO</a>
-                <a class="page-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/Contact.html">CONTACT</a>
+            <div class="flex-buttons">
+                <a class="flex-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/About.html">ABOUT</a>
+                <a class="flex-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/Gallery.html">GALLERY</a>
+                <a class="flex-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/Portfolio.html">PORTFOLIO</a>
+                <a class="flex-btn" href="https://iamjohnchristof-ship-it.github.io/Chris-Portfolio/Contact.html">CONTACT</a>
             </div>
         </div>
     </main>
