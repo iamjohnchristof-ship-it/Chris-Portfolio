@@ -5,20 +5,17 @@
 }
 
 html, body {
-  background-color: #121212;
-  background-image: url("Backgroundguns.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-  height: 100%;                
-  margin: 0;
-  display: flex;
-  flex-direction: column;      
-  overflow-y: auto;                  
-  -webkit-overflow-scrolling: touch;
+background-color: #121212;
+color: #ffffff;
+font-family: Arial, sans-serif;
+min-height: 100vh;
+height: 100%;
+margin: 0;
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+-webkit-overflow-scrolling: touch;
+
 }
 
 main, .main-content, .container, section {
